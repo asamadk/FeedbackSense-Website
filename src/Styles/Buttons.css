@@ -1,0 +1,17 @@
+.outlined-button{
+    background: #1E1E1E;
+    border: 1px solid #006DFF;
+    border-radius: 10px;
+    color : #006DFF;
+    padding: 10px 20px;
+    cursor: pointer;
+}
+
+.contained-button{
+    background: #006DFF;
+    border: 1px solid #006DFF;
+    border-radius: 10px;
+    color : #ffffff;
+    padding: 10px 20px;
+    cursor: pointer;
+}
