@@ -92,7 +92,8 @@ function MainBody() {
       />
       <RightDisplay
         title={'Effortless Survey Creation'}
-        img='/effortless survey creation.png'
+        // img='/effortless survey creation.png'
+        img='analysis5.png'
         design='image-shadow-3'
         desc={'Our platform is designed to make survey creation a breeze. With our intuitive interface and user-friendly features, you can quickly build engaging and impactful surveys without any technical expertise.'}
       />

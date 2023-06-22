@@ -1,4 +1,5 @@
 import { Avatar, Box, Grid, Typography, useMediaQuery } from '@mui/material';
+import analysisGIF from '../Assets/analysisvid.gif';
 import React from 'react'
 import SignalCellularAltIcon from '@mui/icons-material/SignalCellularAlt';
 import AdsClickIcon from '@mui/icons-material/AdsClick';
@@ -19,10 +20,14 @@ function Product() {
       <MidSection2 />
       <LeftDisplay
         title={'Powerful Analytics'}
+        img={analysisGIF}
+        design='image-shadow-2'
         desc={'Gain deep insights into customer feedback and behavior, allowing you to make data-driven decisions and improve your product or service.'}
       />
       <RightDisplay
         title={'Seamless Feedback Collection'}
+        img={'seemlesfc.png'}
+        design='image-shadow-2'
         desc={'Easily gather feedback from customers through intuitive surveys, forms, or in-app feedback widgets, enabling you to understand their needs and preferences.'}
       />
       <LeftDisplay
@@ -33,6 +38,8 @@ function Product() {
       />
       <RightDisplay
         title={'Organize and Streamline with Survey Folders'}
+        img={'firstpage.png'}
+        design='image-shadow-2'
         desc={'Take control of your feedback management process by utilizing our powerful Survey Folders feature. With Survey Folders, you can easily organize and categorize your surveys, enabling efficient data management and streamlined collaboration.'}
       />
     </>
@@ -53,25 +60,26 @@ function HeadingDisplay() {
     <Box sx={{ padding: '10%', display: isSmallScreen === false ? 'flex' : 'block', justifyContent: 'space-between' }} >
       <Box textAlign={'start'} width={isSmallScreen === false ? '40%' : '100%'}  >
         <Typography fontSize={40} >
-          Unlock the Power
-          of Feedback Today.
+          Feedback Simplified 
+          <br/>
+          with Feedback<span style={{color : '#006dff'}} >Sense!</span>
         </Typography>
         <Typography color={'#808080'} >
-          Sign Up for Free and Revolutionize Your Decision-Making Process.
+          With our user-friendly interface, sharing your thoughts has never been easier or more impactful. 
+          <br/>
+          Navigate seamlessly, express freely, and help us serve you better. Your voice, amplified!
         </Typography>
         <Box marginTop={'10px'} >
           <button onClick={handleStartFreePlan} style={{ marginRight: '10px' }} className='contained-button' >Start a free plan</button>
           {/* <button className='outlined-button' >Learn more</button> */}
         </Box>
       </Box>
-      <Box
-        sx={{ backgroundColor: '#323533' }}
-        height={'350px'}
-        width={isSmallScreen === false ? '40%' : '100%'}
-        borderRadius={'10px'}
-        marginTop={isSmallScreen === false ? '0px' : '20px'}
-      >
-      </Box>
+       <img
+        className='image-shadow'
+        style={{ borderRadius: '10px', marginTop: isSmallScreen === false ? '0px' : '20px' }}
+        width={isSmallScreen === false ? '60%' : '100%'}
+        alt='Hero'
+        src='/analysis5.png' />
     </Box>
   )
 }
@@ -88,7 +96,7 @@ function MidSection() {
       <Typography color={'#808080'} >
         Ditch the small talk for real talk to build more meaningful relationships with customers:
       </Typography>
-      <Box
+      {/* <Box
         sx={{ backgroundColor: '#323533' }}
         height={'350px'}
         width={isSmallScreen === false ? '40%' : '100%'}
@@ -97,7 +105,13 @@ function MidSection() {
         marginTop={'20px'}
       >
 
-      </Box>
+      </Box> */}
+      <img
+        className='image-shadow'
+        style={{ borderRadius: '10px', marginTop: isSmallScreen === false ? '10px' : '20px' }}
+        width={isSmallScreen === false ? '40%' : '100%'}
+        alt='Hero'
+        src='/conversation.jpg' />
     </Box>
   )
 }
