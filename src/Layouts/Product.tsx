@@ -1,5 +1,6 @@
 import { Avatar, Box, Grid, Typography, useMediaQuery } from '@mui/material';
 import analysisGIF from '../Assets/analysisvid.gif';
+import designGIF from '../Assets/design.gif';
 import React from 'react'
 import SignalCellularAltIcon from '@mui/icons-material/SignalCellularAlt';
 import AdsClickIcon from '@mui/icons-material/AdsClick';
@@ -32,7 +33,7 @@ function Product() {
       />
       <LeftDisplay
         title={'Customizable Surveys'}
-        img={'colourcheck.png'}
+        img={designGIF}
         design='image-shadow-2'
         desc={'Create personalized surveys tailored to your specific requirements, enabling you to gather targeted feedback and extract valuable insights.'}
       />

@@ -68,7 +68,7 @@ function MainBody() {
       />
       <RightDisplay
         title={'Data-Driven Decision Making'}
-        img='/Data driven dec making.png'
+        img='/dragdropwithflow.png'
         design='image-shadow-3'
         desc={'Identify emerging trends, spot areas for improvement, and make informed decisions based on data, enabling your business to stay ahead of the competition.'}
       />
