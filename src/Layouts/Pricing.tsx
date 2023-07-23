@@ -27,7 +27,7 @@ export default function Pricing(props: any) {
     'option2': 'Annual',
     '01_title': 'FeedbackSense Free',
     '01_price': '$0',
-    '01_suffix': ' / mo',
+    '01_suffix': ' / '+billing,
     '01_benefit1': '1 Active survey',
     '01_benefit2': '1 User',
     '01_benefit3': '50 Response / month',
@@ -36,7 +36,7 @@ export default function Pricing(props: any) {
     '01_secondary-action': 'Learn more',
     '02_title': 'FeedbackSense Starter',
     '02_price': '$' + starterPrice,
-    '02_suffix': ' / mo',
+    '02_suffix': ' / '+billing,
     '02_benefit1': '5 Active Surveys',
     '02_benefit2': 'Unlimited users',
     '02_benefit3': '2000 Response / month',
@@ -45,7 +45,7 @@ export default function Pricing(props: any) {
     '02_secondary-action': 'Learn more',
     '03_title': 'FeedbackSense Ultimate',
     '03_price': '$' + ultimatePrice,
-    '03_suffix': ' / mo',
+    '03_suffix': ' / '+billing,
     '03_benefit1': '10 Active Surveys',
     '03_benefit2': 'User management panel',
     '03_benefit3': '5000 Response / month',
@@ -66,6 +66,7 @@ export default function Pricing(props: any) {
       setUltimatePrice(55);
     }
   };
+
 
   const handleRouteToApp = () => {
     window.open('https://app.feedbacksense.io');
@@ -170,109 +171,109 @@ export default function Pricing(props: any) {
 
 function PlanDetailsTable({ starter, ultimate }: any) {
   return (
-    <TableContainer component={Paper}>
-      <Table aria-label="simple table">
-        <TableHead>
-          <TableRow>
-            <TableCell>Feature</TableCell>
-            <TableCell>Free $0 /mo</TableCell>
-            <TableCell>Starter ${starter} /mo</TableCell>
-            <TableCell>Ultimate ${ultimate} /mo</TableCell>
-          </TableRow>
-        </TableHead>
-        <TableBody>
-          <TableRow>
-            <TableCell>Active surveys</TableCell>
-            <TableCell>1</TableCell>
-            <TableCell>5</TableCell>
-            <TableCell>10</TableCell>
-          </TableRow>
-          <TableRow>
-            <TableCell>Users</TableCell>
-            <TableCell>1</TableCell>
-            <TableCell>Unlimited</TableCell>
-            <TableCell>Unlimited</TableCell>
-          </TableRow>
-          <TableRow>
-            <TableCell>Response capacity / survey</TableCell>
-            <TableCell>500</TableCell>
-            <TableCell>2000</TableCell>
-            <TableCell>5000</TableCell>
-          </TableRow>
-          <TableRow>
-            <TableCell>Response store limit</TableCell>
-            <TableCell>500</TableCell>
-            <TableCell>2000</TableCell>
-            <TableCell>5000</TableCell>
-          </TableRow>
-          <TableRow>
-            <TableCell>Folders</TableCell>
-            <TableCell><RemoveIcon /></TableCell>
-            <TableCell><CheckIcon sx={{ color: '#006DFF' }} /></TableCell>
-            <TableCell><CheckIcon sx={{ color: '#006DFF' }} /></TableCell>
-          </TableRow>
-          <TableRow>
-            <TableCell>Personalized assistance</TableCell>
-            <TableCell><RemoveIcon /></TableCell>
-            <TableCell><CheckIcon sx={{ color: '#006DFF' }} /></TableCell>
-            <TableCell><CheckIcon sx={{ color: '#006DFF' }} /></TableCell>
-          </TableRow>
-          <TableRow>
-            <TableCell>Questions in survey</TableCell>
-            <TableCell>Unlimited</TableCell>
-            <TableCell>Unlimited</TableCell>
-            <TableCell>Unlimited</TableCell>
-          </TableRow>
-          <TableRow>
-            <TableCell>Detailed analysis</TableCell>
-            <TableCell><RemoveIcon /></TableCell>
-            <TableCell><CheckIcon sx={{ color: '#006DFF' }} /></TableCell>
-            <TableCell><CheckIcon sx={{ color: '#006DFF' }} /></TableCell>
-          </TableRow>
-          <TableRow>
-            <TableCell>AI analysis</TableCell>
-            <TableCell><RemoveIcon /></TableCell>
-            <TableCell><RemoveIcon /></TableCell>
-            <TableCell><CheckIcon sx={{ color: '#006DFF' }} /></TableCell>
-          </TableRow>
-          <TableRow>
-            <TableCell>Collection time / survey</TableCell>
-            <TableCell>Unlimited</TableCell>
-            <TableCell>Unlimited</TableCell>
-            <TableCell>Unlimited</TableCell>
-          </TableRow>
-          <TableRow>
-            <TableCell>Notifications</TableCell>
-            <TableCell><RemoveIcon /></TableCell>
-            <TableCell><CheckIcon sx={{ color: '#006DFF' }} /></TableCell>
-            <TableCell><CheckIcon sx={{ color: '#006DFF' }} /></TableCell>
-          </TableRow>
-          <TableRow>
-            <TableCell>Email support</TableCell>
-            <TableCell><RemoveIcon /></TableCell>
-            <TableCell><CheckIcon sx={{ color: '#006DFF' }} /></TableCell>
-            <TableCell><CheckIcon sx={{ color: '#006DFF' }} /></TableCell>
-          </TableRow>
-          <TableRow>
-            <TableCell>Exclusive Features</TableCell>
-            <TableCell><RemoveIcon /></TableCell>
-            <TableCell><CheckIcon sx={{ color: '#006DFF' }} /></TableCell>
-            <TableCell><CheckIcon sx={{ color: '#006DFF' }} /></TableCell>
-          </TableRow>
-          <TableRow>
-            <TableCell>Result export</TableCell>
-            <TableCell><RemoveIcon /></TableCell>
-            <TableCell>Coming soon</TableCell>
-            <TableCell>Coming soon</TableCell>
-          </TableRow>
-          <TableRow>
-            <TableCell>Custom logo</TableCell>
-            <TableCell><RemoveIcon /></TableCell>
-            <TableCell>Coming soon</TableCell>
-            <TableCell>Coming soon</TableCell>
-          </TableRow>
-        </TableBody>
-      </Table>
-    </TableContainer>
+    <TableContainer style={{ margin: '35px' }} component={Paper}>
+            <Table aria-label="simple table">
+                <TableHead>
+                    <TableRow>
+                        <TableCell>Feature</TableCell>
+                        <TableCell>Free $0 /year</TableCell>
+                        <TableCell>Starter ${starter} /year</TableCell>
+                        <TableCell>Growth ${ultimate} /year</TableCell>
+                    </TableRow>
+                </TableHead>
+                <TableBody>
+                    <TableRow>
+                        <TableCell>Active surveys</TableCell>
+                        <TableCell>1</TableCell>
+                        <TableCell>5</TableCell>
+                        <TableCell>10</TableCell>
+                    </TableRow>
+                    <TableRow>
+                        <TableCell>Users</TableCell>
+                        <TableCell>1</TableCell>
+                        <TableCell>Unlimited</TableCell>
+                        <TableCell>Unlimited</TableCell>
+                    </TableRow>
+                    <TableRow>
+                        <TableCell>Response capacity / survey</TableCell>
+                        <TableCell>50</TableCell>
+                        <TableCell>2000</TableCell>
+                        <TableCell>5000</TableCell>
+                    </TableRow>
+                    <TableRow>
+                        <TableCell>Response store limit</TableCell>
+                        <TableCell>50</TableCell>
+                        <TableCell>2000</TableCell>
+                        <TableCell>5000</TableCell>
+                    </TableRow>
+                    <TableRow>
+                        <TableCell>Folders</TableCell>
+                        <TableCell><RemoveIcon /></TableCell>
+                        <TableCell><CheckIcon sx={{ color: '#006DFF' }} /></TableCell>
+                        <TableCell><CheckIcon sx={{ color: '#006DFF' }} /></TableCell>
+                    </TableRow>
+                    <TableRow>
+                        <TableCell>Personalized assistance</TableCell>
+                        <TableCell><RemoveIcon /></TableCell>
+                        <TableCell><CheckIcon sx={{ color: '#006DFF' }} /></TableCell>
+                        <TableCell><CheckIcon sx={{ color: '#006DFF' }} /></TableCell>
+                    </TableRow>
+                    <TableRow>
+                        <TableCell>Questions in survey</TableCell>
+                        <TableCell>Unlimited</TableCell>
+                        <TableCell>Unlimited</TableCell>
+                        <TableCell>Unlimited</TableCell>
+                    </TableRow>
+                    <TableRow>
+                        <TableCell>Detailed analysis</TableCell>
+                        <TableCell><RemoveIcon /></TableCell>
+                        <TableCell><CheckIcon sx={{ color: '#006DFF' }} /></TableCell>
+                        <TableCell><CheckIcon sx={{ color: '#006DFF' }} /></TableCell>
+                    </TableRow>
+                    <TableRow>
+                        <TableCell>AI analysis</TableCell>
+                        <TableCell><RemoveIcon /></TableCell>
+                        <TableCell><RemoveIcon /></TableCell>
+                        <TableCell><CheckIcon sx={{ color: '#006DFF' }} /></TableCell>
+                    </TableRow>
+                    <TableRow>
+                        <TableCell>Collection time / survey</TableCell>
+                        <TableCell>Unlimited</TableCell>
+                        <TableCell>Unlimited</TableCell>
+                        <TableCell>Unlimited</TableCell>
+                    </TableRow>
+                    <TableRow>
+                        <TableCell>Notifications</TableCell>
+                        <TableCell><RemoveIcon /></TableCell>
+                        <TableCell><CheckIcon sx={{ color: '#006DFF' }} /></TableCell>
+                        <TableCell><CheckIcon sx={{ color: '#006DFF' }} /></TableCell>
+                    </TableRow>
+                    <TableRow>
+                        <TableCell>Email support</TableCell>
+                        <TableCell><RemoveIcon /></TableCell>
+                        <TableCell><CheckIcon sx={{ color: '#006DFF' }} /></TableCell>
+                        <TableCell><CheckIcon sx={{ color: '#006DFF' }} /></TableCell>
+                    </TableRow>
+                    <TableRow>
+                        <TableCell>Exclusive Features</TableCell>
+                        <TableCell><RemoveIcon /></TableCell>
+                        <TableCell><CheckIcon sx={{ color: '#006DFF' }} /></TableCell>
+                        <TableCell><CheckIcon sx={{ color: '#006DFF' }} /></TableCell>
+                    </TableRow>
+                    <TableRow>
+                        <TableCell>Result export</TableCell>
+                        <TableCell><RemoveIcon /></TableCell>
+                        <TableCell>Coming soon</TableCell>
+                        <TableCell>Coming soon</TableCell>
+                    </TableRow>
+                    <TableRow>
+                        <TableCell>Custom logo</TableCell>
+                        <TableCell><RemoveIcon /></TableCell>
+                        <TableCell>Coming soon</TableCell>
+                        <TableCell>Coming soon</TableCell>
+                    </TableRow>
+                </TableBody>
+            </Table>
+        </TableContainer>
   )
 }

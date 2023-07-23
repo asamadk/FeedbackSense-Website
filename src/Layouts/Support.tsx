@@ -1,39 +1,20 @@
 import React, { useState } from 'react';
-
-import RoomIcon from '@mui/icons-material/Room';
-import PhoneIcon from '@mui/icons-material/Phone';
 import EmailIcon from '@mui/icons-material/Email';
 import WebAssetIcon from '@mui/icons-material/WebAsset';
 import FacebookIcon from '@mui/icons-material/Facebook';
 import TwitterIcon from '@mui/icons-material/Twitter';
 import LinkedInIcon from '@mui/icons-material/LinkedIn';
-// import nodemailer from 'nodemailer';
+
 import { Avatar, Box, Container, Grid, IconButton, TextField, ThemeProvider, Typography, createTheme, makeStyles } from '@mui/material';
 
 export default function Support(props : any) {
 
-  // const transporter = nodemailer.createTransport({
-  //   // host: 'smtp.ethereal.email',
-  //   // port: 587,
-  //   // secure: false,
-  //   service : 'gmail',
-  //   auth: {
-  //     user: process.env.REACT_APP_MAIL_SENDER,
-  //     pass: process.env.REACT_APP_MAIL_SENDER_PASSWORD,
-  //   },
-  // });
-
   const content = {
     'header': 'You can reach us at.',
     'description': 'Feel free to contact us with the listed means as you see fit.',
-    'contact1': 'Address',
-    'contact1-desc1': 'Mayur talkies road',
-    'contact1-desc2': 'Banda India, 210001',
     'contact2': 'Email',
     'contact2-desc': 'founder@feedbacksense.io',
     'contact3': 'Social Media',
-    'contact4': 'Phone',
-    'contact4-desc': '(+91)7007475550',
     ...props.content
   };
 
@@ -47,16 +28,6 @@ export default function Support(props : any) {
       subject : subject,
       message : message
     }
-    console.log("🚀 ~ file: Support.tsx:38 ~ handleSubmit ~ saveObj:", saveObj)
-
-    // const options = {
-    //   from: 'founder@feedbacksense.io',
-    //   to: 'founder@feedbacksense.io',
-    //   subject: 'FeedbackSense website contact us filled',
-    //   text : JSON.stringify(saveObj)
-    // };
-    
-    // transporter.sendMail(options);
   }
 
   return (
@@ -90,18 +61,6 @@ export default function Support(props : any) {
             </Grid>
             <Grid item xs={12} sm={6} md={4}>
               <div >
-                <Box display="flex" mb={3}>
-                  <div>
-                    <Avatar >
-                      <RoomIcon color="primary" fontSize="small" />
-                    </Avatar>
-                  </div>
-                  <Box ml={2}>
-                    <Typography variant="h6" gutterBottom={true}>{content['contact1']}</Typography>
-                    <Typography variant="body2" color="#808080">{content['contact1-desc1']}</Typography>
-                    <Typography variant="body2" color="#808080">{content['contact1-desc2']}</Typography>
-                  </Box>
-                </Box>
                 <Box display="flex">
                   <div>
                     <Avatar >
@@ -133,17 +92,6 @@ export default function Support(props : any) {
                   <IconButton href="#" color="inherit">
                     <LinkedInIcon />
                   </IconButton>
-                </Box>
-              </Box>
-              <Box display="flex">
-                <div>
-                  <Avatar >
-                    <PhoneIcon color="primary" fontSize="small" />
-                  </Avatar>
-                </div>
-                <Box ml={2}>
-                  <Typography variant="h6" gutterBottom={true}>{content['contact4']}</Typography>
-                  <Typography variant="body2" color="#808080">{content['contact4-desc']}</Typography>
                 </Box>
               </Box>
             </Grid>
