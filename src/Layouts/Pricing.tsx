@@ -219,6 +219,12 @@ function PlanDetailsTable({ starter, ultimate }: any) {
                         <TableCell><CheckIcon sx={{ color: '#006DFF' }} /></TableCell>
                     </TableRow>
                     <TableRow>
+                        <TableCell>FeedbackSense  Branding</TableCell>
+                        <TableCell><RemoveIcon /></TableCell>
+                        <TableCell><RemoveIcon /></TableCell>
+                        <TableCell><CheckIcon sx={{ color: '#006DFF' }} /></TableCell>
+                    </TableRow>
+                    <TableRow>
                         <TableCell>Questions in survey</TableCell>
                         <TableCell>Unlimited</TableCell>
                         <TableCell>Unlimited</TableCell>
