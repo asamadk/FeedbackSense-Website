@@ -71,13 +71,31 @@ function Header() {
 
     const handleStartFreePlan = () => {
         window.open('https://app.feedbacksense.io');
-      }
+    }
+
+    const handleBookMeeting = () => {
+        window.open('https://calendly.com/feedbacksense/demo','__blank');
+    }
 
     return (
         <>
             {isSmallScreen === false ?
-                <Box display={'flex'} justifyContent={'space-between'} padding={'10px'} margin={'10px'} >
-                    <Box><Logo /></Box>
+                <Box 
+                    display={'flex'} 
+                    sx={{backgroundColor : '#1e1e1e'}}
+                    justifyContent={'space-between'} 
+                    // padding={'10px'} 
+                    // margin={'10px'} 
+                    borderBottom={'0.5px #454545 solid'}
+                    paddingBottom={'20px'}
+                    paddingTop={'20px'}
+                    position="fixed" // <-- This line makes it fixed
+                    width="100%" // <-- This line sets the width to cover the entire viewport width
+                    zIndex="999" // <-- This line ensures that the header stays on top of other content
+                    top={0} // <-- This line positions the header at the top of the page
+                    // left={0} // <-- This line positions the header at the left edge of the page
+                >
+                    <Box sx={{marginLeft : '10px'}} ><Logo /></Box>
                     <Box display={'flex'} >
                         <Box sx={selectedTabVal === 0 ? selectedTab : marginTabStyle} onClick={() => handleTabClick(0)}>Home</Box>
                         <Box sx={selectedTabVal === 1 ? selectedTab : marginTabStyle} onClick={() => handleTabClick(1)}>Product</Box>
@@ -88,11 +106,11 @@ function Header() {
                         <button onClick={handleStartFreePlan} style={{ marginRight: '10px' }} className='outlined-button' >
                             Login
                         </button>
-                        <button onClick={handleStartFreePlan} className='contained-button' >
-                            Go to app
+                        <button style={{ marginRight: '10px' }} onClick={handleBookMeeting} className='contained-button' >
+                            Book a demo
                         </button>
                     </Box>
-                </Box> : <SmallScreenHeader handleClick={handleTabClick} />
+                </Box> : <SmallScreenHeader handleClick={handleTabClick} />    
             }
         </>
     )
@@ -101,6 +119,15 @@ function Header() {
 export default Header
 
 function SmallScreenHeader(props: any) {
+
+    const handleStartFreePlan = () => {
+        window.open('https://app.feedbacksense.io');
+    }
+
+    const handleBookMeeting = () => {
+        window.open('https://calendly.com/feedbacksense/demo','__blank');
+    }
+
     const [state, setState] = React.useState({
         top: false,
         left: false,
@@ -142,8 +169,13 @@ function SmallScreenHeader(props: any) {
                     </ListItem>
                 ))}
             </List>
+            <Box paddingLeft={'25px'} width={'100%'} marginBottom={'10px'}>
+                <button onClick={handleBookMeeting} style={{width : '140px'}} className='outlined-button' >
+                    Book a meeting
+                </button>
+            </Box>
             <Box paddingLeft={'25px'} marginBottom={'10px'}>
-                <button className='contained-button' >
+                <button onClick={handleStartFreePlan} style={{width : '140px'}} className='contained-button' >
                     Go to app
                 </button>
             </Box>

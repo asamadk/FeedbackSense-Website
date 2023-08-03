@@ -55,6 +55,12 @@ export default function Support(props: any) {
   }
 
   return (
+    <>
+      {/* <div 
+        className="calendly-inline-widget" 
+        data-url="https://calendly.com/feedbacksense/demo?primary_color=006dff"
+        style={{minWidth : '320px',height : '700px'}}
+      ></div> */}
     <section>
       <ThemeProvider theme={createTheme({ palette: { mode: 'dark' } })} >
         <Box width={'60%'} margin={'auto'} marginTop={'10%'} marginBottom={'10%'} >
@@ -86,6 +92,7 @@ export default function Support(props: any) {
           </Box>
         </Box>
       </ThemeProvider>
+      
       <Container maxWidth="lg" sx={{ textAlign: 'start', width: '60%', margin: 'auto' }} >
         <Box py={10}>
           <Grid container spacing={6}>
@@ -133,5 +140,6 @@ export default function Support(props: any) {
         </Box>
       </Container>
     </section>
+    </>
   );
 }
