@@ -5,7 +5,7 @@
     <link rel="icon" href="%PUBLIC_URL%/logofeedback.ico" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="theme-color" content="#000000" />
-    <meta name="description" content="We make sense of your feedback"/>
+    <meta name="description" content="We make sense of your feedback" />
     <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
     <title>FeedbackSense</title>
   </head>
@@ -13,5 +13,18 @@
     <noscript>You need to enable JavaScript to run this app.</noscript>
     <div id="root"></div>
   </body>
-  <!-- <script type="text/javascript" src="https://assets.calendly.com/assets/external/widget.js" async></script> -->
+  <!-- Google tag (gtag.js) -->
+  <script
+    async
+    src="https://www.googletagmanager.com/gtag/js?id=G-TDTES7PL5H"
+  ></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() {
+      dataLayer.push(arguments);
+    }
+    gtag("js", new Date());
+
+    gtag("config", "G-TDTES7PL5H");
+  </script>
 </html>
