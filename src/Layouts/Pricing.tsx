@@ -27,7 +27,7 @@ export default function Pricing(props: any) {
     'option2': 'Annual',
     '01_title': 'FeedbackSense Free',
     '01_price': '$0',
-    '01_suffix': ' / '+billing,
+    '01_suffix': `/mo`,
     '01_benefit1': '1 Active survey',
     '01_benefit2': '1 User',
     '01_benefit3': '50 Response / month',
@@ -36,7 +36,7 @@ export default function Pricing(props: any) {
     '01_secondary-action': 'Learn more',
     '02_title': 'FeedbackSense Starter',
     '02_price': '$' + starterPrice,
-    '02_suffix': ' / '+billing,
+    '02_suffix': `/mo (billed ${billing}ly)`,
     '02_benefit1': '5 Active Surveys',
     '02_benefit2': 'Unlimited users',
     '02_benefit3': '2000 Response / month',
@@ -45,12 +45,12 @@ export default function Pricing(props: any) {
     '02_secondary-action': 'Learn more',
     '03_title': 'FeedbackSense Ultimate',
     '03_price': '$' + ultimatePrice,
-    '03_suffix': ' / '+billing,
+    '03_suffix': `/mo (billed ${billing}ly)`,
     '03_benefit1': '10 Active Surveys',
     '03_benefit2': 'User management panel',
     '03_benefit3': '5000 Response / month',
     '03_benefit4': 'AI assisted analysis',
-    '03_primary-action': 'Coming soong',
+    '03_primary-action': 'Select Plan',
     '03_secondary-action': 'Learn more',
     ...props.content
   };
@@ -76,7 +76,7 @@ export default function Pricing(props: any) {
     <section>
       <Container maxWidth="lg">
         <Box py={8} textAlign="center">
-          <Box mb={3}>
+          <Box mt={5} mb={3} >
             <Container maxWidth="sm">
               <Typography variant="h3" component="h2" gutterBottom={true}>
                 <Typography variant="h3" component="span" color="primary">{content['header-p1']} </Typography>
@@ -95,41 +95,41 @@ export default function Pricing(props: any) {
               <Card sx={{ backgroundColor: '#1e1e1e', color: 'white', border: '1px #808080 solid' }} variant="outlined">
                 <CardHeader title={content['01_title']} ></CardHeader>
                 <CardContent>
-                  <Box px={1}>
-                    <Typography variant="h3" component="h2" gutterBottom={true}>
+                  <Box px={1} mb={5} >
+                    <Typography color={'#006dff'} variant="h3" component="h2" gutterBottom={true}>
                       {content['01_price']}
                       <Typography variant="h6" component="span">{content['01_suffix']}</Typography>
                     </Typography>
-                    <Typography variant="subtitle1" component="p">{content['01_benefit1']}</Typography>
-                    <Typography variant="subtitle1" component="p">{content['01_benefit2']}</Typography>
-                    <Typography variant="subtitle1" component="p">{content['01_benefit3']}</Typography>
-                    <Typography variant="subtitle1" component="p" paragraph={true}>{content['01_benefit4']}</Typography>
+                    <Typography color={'#808080'} variant="subtitle1" component="p">{content['01_benefit1']}</Typography>
+                    <Typography color={'#808080'} variant="subtitle1" component="p">{content['01_benefit2']}</Typography>
+                    <Typography color={'#808080'} variant="subtitle1" component="p">{content['01_benefit3']}</Typography>
+                    <Typography color={'#808080'} variant="subtitle1" component="p" paragraph={true}>{content['01_benefit4']}</Typography>
                   </Box>
                   <Button onClick={handleRouteToApp} variant="outlined" color="primary" >{content['01_primary-action']}</Button>
-                  <Box mt={2}>
+                  {/* <Box mt={2}>
                     <Link href="#" color="primary">{content['03_secondary-action']}</Link>
-                  </Box>
+                  </Box> */}
                 </CardContent>
               </Card>
             </Grid>
             <Grid item xs={12} md={4}>
-              <Card sx={{ backgroundColor: '#006DFF', color: 'white', border: '1px #006DFF solid' }} variant="outlined">
+              <Card sx={{ backgroundColor: '#1e1e1e', color: 'white', border: '1px #808080 solid' }} variant="outlined">
                 <CardHeader title={content['02_title']} ></CardHeader>
                 <CardContent>
-                  <Box px={1}>
-                    <Typography variant="h3" component="h2" gutterBottom={true}>
+                  <Box px={1} mb={5} >
+                    <Typography color={'#006dff'}  variant="h3" component="h2" gutterBottom={true}>
                       {content['02_price']}
                       <Typography variant="h6" component="span">{content['02_suffix']}</Typography>
                     </Typography>
-                    <Typography variant="subtitle1" component="p">{content['02_benefit1']}</Typography>
-                    <Typography variant="subtitle1" component="p">{content['02_benefit2']}</Typography>
-                    <Typography variant="subtitle1" component="p">{content['02_benefit3']}</Typography>
-                    <Typography variant="subtitle1" component="p" paragraph={true}>{content['02_benefit4']}</Typography>
+                    <Typography color={'#808080'} variant="subtitle1" component="p">{content['02_benefit1']}</Typography>
+                    <Typography color={'#808080'} variant="subtitle1" component="p">{content['02_benefit2']}</Typography>
+                    <Typography color={'#808080'} variant="subtitle1" component="p">{content['02_benefit3']}</Typography>
+                    <Typography color={'#808080'} variant="subtitle1" component="p" paragraph={true}>{content['02_benefit4']}</Typography>
                   </Box>
                   <Button onClick={handleRouteToApp} variant="contained" color="info">{content['02_primary-action']}</Button>
-                  <Box mt={2}>
+                  {/* <Box mt={2}>
                     <Link href="#" color="#fffff">{content['03_secondary-action']}</Link>
-                  </Box>
+                  </Box> */}
                 </CardContent>
               </Card>
             </Grid>
@@ -137,20 +137,20 @@ export default function Pricing(props: any) {
               <Card sx={{ backgroundColor: '#1e1e1e', color: 'white', border: '1px #808080 solid' }} variant="outlined">
                 <CardHeader title={content['03_title']} ></CardHeader>
                 <CardContent>
-                  <Box px={1}>
-                    <Typography variant="h3" component="h2" gutterBottom={true}>
+                  <Box px={1} mb={5} >
+                    <Typography variant="h3" color={'#006dff'} component="h2" gutterBottom={true}>
                       {content['03_price']}
                       <Typography variant="h6" component="span">{content['03_suffix']}</Typography>
                     </Typography>
-                    <Typography variant="subtitle1" component="p">{content['03_benefit1']}</Typography>
-                    <Typography variant="subtitle1" component="p">{content['03_benefit2']}</Typography>
-                    <Typography variant="subtitle1" component="p">{content['03_benefit3']}</Typography>
-                    <Typography variant="subtitle1" component="p" paragraph={true}>{content['03_benefit4']}</Typography>
+                    <Typography color={'#808080'} variant="subtitle1" component="p">{content['03_benefit1']}</Typography>
+                    <Typography color={'#808080'} variant="subtitle1" component="p">{content['03_benefit2']}</Typography>
+                    <Typography color={'#808080'} variant="subtitle1" component="p">{content['03_benefit3']}</Typography>
+                    <Typography color={'#808080'} variant="subtitle1" component="p" paragraph={true}>{content['03_benefit4']}</Typography>
                   </Box>
                   <Button variant="outlined" color="primary">{content['03_primary-action']}</Button>
-                  <Box mt={2}>
+                  {/* <Box mt={2}>
                     <Link href="#" color="primary">{content['03_secondary-action']}</Link>
-                  </Box>
+                  </Box> */}
                 </CardContent>
               </Card>
             </Grid>
