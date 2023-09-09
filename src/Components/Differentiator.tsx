@@ -2,13 +2,15 @@ import { Box, IconButton, Typography, useMediaQuery } from '@mui/material'
 import React, { useEffect, useState } from 'react'
 import ArrowBackIosIcon from '@mui/icons-material/ArrowBackIos';
 import ArrowForwardIosIcon from '@mui/icons-material/ArrowForwardIos';
-import analysisGIF from '../Assets/analysisvid.gif';
-import designGIF from '../Assets/design.gif';
 
 function Differentiator() {
 
     useEffect(() => {
         // return () => clearInterval(intervalId);
+        data.forEach(item => {
+            const img = new Image();
+            img.src = item.image;
+        });
     }, []); 
     
     const isSmallScreen = useMediaQuery('(max-width: 830px)');
