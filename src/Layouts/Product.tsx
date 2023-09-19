@@ -61,13 +61,13 @@ function HeadingDisplay() {
     <Box sx={{ padding: '10%', display: isSmallScreen === false ? 'flex' : 'block', justifyContent: 'space-between' }} >
       <Box textAlign={'start'} width={isSmallScreen === false ? '40%' : '100%'}  >
         <Typography fontSize={40} >
-          Feedback Simplified 
-          <br/>
-          with Feedback<span style={{color : '#006dff'}} >Sense!</span>
+          Feedback Simplified
+          <br />
+          with Feedback<span style={{ color: '#006dff' }} >Sense!</span>
         </Typography>
         <Typography color={'#808080'} >
-          With our user-friendly interface, sharing your thoughts has never been easier or more impactful. 
-          <br/>
+          With our user-friendly interface, sharing your thoughts has never been easier or more impactful.
+          <br />
           Navigate seamlessly, express freely, and help us serve you better. Your voice, amplified!
         </Typography>
         <Box marginTop={'10px'} >
@@ -75,7 +75,7 @@ function HeadingDisplay() {
           {/* <button className='outlined-button' >Learn more</button> */}
         </Box>
       </Box>
-       <img
+      <img
         className='image-shadow'
         style={{ borderRadius: '10px', marginTop: isSmallScreen === false ? '0px' : '20px' }}
         width={isSmallScreen === false ? '60%' : '100%'}
@@ -137,8 +137,10 @@ function MidSection2() {
             <Avatar sx={{ bgcolor: '#006DFF', width: '100px', height: '100px', margin: 'auto', marginTop: '80px' }} >
               <SignalCellularAltIcon sx={{ fontSize: '40px' }} />
             </Avatar>
-            <Typography fontSize={20} marginTop={'10px'} >Real-time sentiment analysis</Typography>
-            <Typography fontSize={14} color={'#808080'} >Understand the overall sentiment of customer feedback in real-time.</Typography>
+            {/* <Typography fontSize={20} marginTop={'10px'} >Real-time sentiment analysis</Typography> */}
+            {/* <Typography fontSize={14} color={'#808080'} >Understand the overall sentiment of customer feedback in real-time.</Typography> */}
+            <Typography fontSize={20} marginTop={'10px'} >Skip Logic</Typography>
+            <Typography fontSize={14} color={'#808080'} >Dynamically guide respondents through your survey based on their answers, ensuring only relevant questions are displayed.</Typography>
           </Box>
         </Box>
         <Box
@@ -216,8 +218,10 @@ function MidSection2() {
             <Avatar sx={{ bgcolor: '#006DFF', width: '100px', height: '100px', margin: 'auto', marginTop: '80px' }} >
               <Diversity1Icon sx={{ fontSize: '40px' }} />
             </Avatar>
-            <Typography fontSize={20} marginTop={'10px'} >Custom logo</Typography>
-            <Typography fontSize={14} color={'#808080'} >Our custom logo design service offers a tailored and professional solution to help your brand stand out.</Typography>
+            {/* <Typography fontSize={20} marginTop={'10px'} >Custom logo</Typography> */}
+            {/* <Typography fontSize={14} color={'#808080'} >Our custom logo design service offers a tailored and professional solution to help your brand stand out.</Typography> */}
+            <Typography fontSize={20} marginTop={'10px'} >Templates</Typography>
+            <Typography fontSize={14} color={'#808080'} >Pre-designed layouts and content structures to quickly start and customize your surveys effortlessly</Typography>
           </Box>
         </Box><Box
           width={isSmallScreen === false ? '30%' : '100%'}
@@ -229,8 +233,10 @@ function MidSection2() {
             <Avatar sx={{ bgcolor: '#006DFF', width: '100px', height: '100px', margin: 'auto', marginTop: '80px' }} >
               <ImportExportIcon sx={{ fontSize: '40px' }} />
             </Avatar>
-            <Typography fontSize={20} marginTop={'10px'} >Export results</Typography>
-            <Typography fontSize={14} color={'#808080'} >Export your results effortlessly with our intuitive export feature.</Typography>
+            {/* <Typography fontSize={20} marginTop={'10px'} >Export results</Typography>
+            <Typography fontSize={14} color={'#808080'} >Export your results effortlessly with our intuitive export feature.</Typography> */}
+            <Typography fontSize={20} marginTop={'10px'} >Drag & Drop Survey Builder</Typography>
+            <Typography fontSize={14} color={'#808080'} > Intuitively create and organize your surveys with a seamless drag-and-drop interface.</Typography>
           </Box>
         </Box><Box
           width={isSmallScreen === false ? '30%' : '100%'}

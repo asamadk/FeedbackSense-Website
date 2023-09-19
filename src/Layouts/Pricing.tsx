@@ -1,23 +1,27 @@
-import { Box, Button, Card, CardContent, CardHeader, Container, Grid, Link, Paper, Switch, Table, TableBody, TableCell, TableContainer, TableHead, TableRow, ThemeProvider, Typography, createTheme, makeStyles } from '@mui/material';
+import { Box, Button, Card, CardContent, CardHeader, Container, Grid, Link, Modal, Paper, Switch, Table, TableBody, TableCell, TableContainer, TableHead, TableRow, TextField, ThemeProvider, Typography, createTheme, makeStyles, useMediaQuery } from '@mui/material';
 import CheckIcon from '@mui/icons-material/Check';
 import RemoveIcon from '@mui/icons-material/Remove';
+import Typewriter from "typewriter-effect";
+import emailjs, { EmailJSResponseStatus } from 'emailjs-com';
 import React, { useState } from 'react';
+import { LoadingButton } from '@mui/lab';
 
+const darkTheme = createTheme({
+  palette: {
+    mode: 'dark',
+  },
+  typography: {
+    fontFamily: 'Apercu Pro, sans-serif'
+  }
+});
 
 export default function Pricing(props: any) {
 
   const [starterPrice, setStarterPrice] = useState(25);
   const [ultimatePrice, setUltimatePrice] = useState(49);
   const [billing, setBilling] = useState<'month' | 'year'>('year');
-
-  const darkTheme = createTheme({
-    palette: {
-      mode: 'dark',
-    },
-    typography: {
-      fontFamily: 'Apercu Pro, sans-serif'
-    }
-  });
+  const [showModal, setShowModal] = useState(false);
+  const [selectedPrice, setSelectedPrice] = useState<null | string>(null);
 
   const content = {
     'header-p1': 'Simple no-tricks pricing',
@@ -52,6 +56,7 @@ export default function Pricing(props: any) {
     '03_benefit4': 'AI assisted analysis',
     '03_primary-action': 'Select Plan',
     '03_secondary-action': 'Learn more',
+    'free-trial': '7 days free trial',
     ...props.content
   };
 
@@ -67,9 +72,13 @@ export default function Pricing(props: any) {
     }
   };
 
+  const handleRouteToApp = (price: string) => {
+    setSelectedPrice(price);
+    setShowModal(true);
+  }
 
-  const handleRouteToApp = () => {
-    window.open('https://app.feedbacksense.io');
+  const handleModalClose = () => {
+    setShowModal(false);
   }
 
   return (
@@ -99,16 +108,25 @@ export default function Pricing(props: any) {
                     <Typography color={'#006dff'} variant="h3" component="h2" gutterBottom={true}>
                       {content['01_price']}
                       <Typography variant="h6" component="span">{content['01_suffix']}</Typography>
+                      <Box sx={{ fontSize: '15px', color: '#8F384D' }} >
+                        <Typewriter
+                          onInit={(typewriter) => {
+                            typewriter
+                              .typeString("")
+                              .pauseFor(1000)
+                              .deleteAll()
+                              .typeString(content['free-trial'])
+                              .start()
+                          }}
+                        />
+                      </Box>
                     </Typography>
                     <Typography color={'#808080'} variant="subtitle1" component="p">{content['01_benefit1']}</Typography>
                     <Typography color={'#808080'} variant="subtitle1" component="p">{content['01_benefit2']}</Typography>
                     <Typography color={'#808080'} variant="subtitle1" component="p">{content['01_benefit3']}</Typography>
                     <Typography color={'#808080'} variant="subtitle1" component="p" paragraph={true}>{content['01_benefit4']}</Typography>
                   </Box>
-                  <Button onClick={handleRouteToApp} variant="outlined" color="primary" >{content['01_primary-action']}</Button>
-                  {/* <Box mt={2}>
-                    <Link href="#" color="primary">{content['03_secondary-action']}</Link>
-                  </Box> */}
+                  <Button onClick={() => handleRouteToApp(content['01_price'])} variant="outlined" color="primary" >{content['01_primary-action']}</Button>
                 </CardContent>
               </Card>
             </Grid>
@@ -117,19 +135,28 @@ export default function Pricing(props: any) {
                 <CardHeader title={content['02_title']} ></CardHeader>
                 <CardContent>
                   <Box px={1} mb={5} >
-                    <Typography color={'#006dff'}  variant="h3" component="h2" gutterBottom={true}>
+                    <Typography color={'#006dff'} variant="h3" component="h2" gutterBottom={true}>
                       {content['02_price']}
                       <Typography variant="h6" component="span">{content['02_suffix']}</Typography>
+                      <Box sx={{ fontSize: '15px', color: '#8F384D' }} >
+                        <Typewriter
+                          onInit={(typewriter) => {
+                            typewriter
+                              .typeString("")
+                              .pauseFor(1000)
+                              .deleteAll()
+                              .typeString(content['free-trial'])
+                              .start()
+                          }}
+                        />
+                      </Box>
                     </Typography>
                     <Typography color={'#808080'} variant="subtitle1" component="p">{content['02_benefit1']}</Typography>
                     <Typography color={'#808080'} variant="subtitle1" component="p">{content['02_benefit2']}</Typography>
                     <Typography color={'#808080'} variant="subtitle1" component="p">{content['02_benefit3']}</Typography>
                     <Typography color={'#808080'} variant="subtitle1" component="p" paragraph={true}>{content['02_benefit4']}</Typography>
                   </Box>
-                  <Button onClick={handleRouteToApp} variant="contained" color="info">{content['02_primary-action']}</Button>
-                  {/* <Box mt={2}>
-                    <Link href="#" color="#fffff">{content['03_secondary-action']}</Link>
-                  </Box> */}
+                  <Button onClick={() => handleRouteToApp(content['02_price'])} variant="contained" color="info">{content['02_primary-action']}</Button>
                 </CardContent>
               </Card>
             </Grid>
@@ -141,16 +168,25 @@ export default function Pricing(props: any) {
                     <Typography variant="h3" color={'#006dff'} component="h2" gutterBottom={true}>
                       {content['03_price']}
                       <Typography variant="h6" component="span">{content['03_suffix']}</Typography>
+                      <Box sx={{ fontSize: '15px', color: '#8F384D' }} >
+                        <Typewriter
+                          onInit={(typewriter) => {
+                            typewriter
+                              .typeString("")
+                              .pauseFor(1000)
+                              .deleteAll()
+                              .typeString(content['free-trial'])
+                              .start()
+                          }}
+                        />
+                      </Box>
                     </Typography>
                     <Typography color={'#808080'} variant="subtitle1" component="p">{content['03_benefit1']}</Typography>
                     <Typography color={'#808080'} variant="subtitle1" component="p">{content['03_benefit2']}</Typography>
                     <Typography color={'#808080'} variant="subtitle1" component="p">{content['03_benefit3']}</Typography>
                     <Typography color={'#808080'} variant="subtitle1" component="p" paragraph={true}>{content['03_benefit4']}</Typography>
                   </Box>
-                  <Button variant="outlined" color="primary">{content['03_primary-action']}</Button>
-                  {/* <Box mt={2}>
-                    <Link href="#" color="primary">{content['03_secondary-action']}</Link>
-                  </Box> */}
+                  <Button onClick={() => handleRouteToApp(content['03_price'])} variant="outlined" color="primary">{content['03_primary-action']}</Button>
                 </CardContent>
               </Card>
             </Grid>
@@ -159,127 +195,191 @@ export default function Pricing(props: any) {
       </Container>
       <ThemeProvider theme={darkTheme} >
         <Box margin={'20px'} >
-          <PlanDetailsTable 
+          <PlanDetailsTable
             starter={starterPrice}
             ultimate={ultimatePrice}
           />
         </Box>
       </ThemeProvider>
+      <EmailModal price={selectedPrice} open={showModal} close={handleModalClose} />
     </section>
   );
+}
+
+function EmailModal(props: any) {
+
+  const [email, setEmail] = useState('');
+  const [loading, setLoading] = useState(false);
+  const isSmallScreen = useMediaQuery('(max-width: 830px)');
+
+  const style = {
+    position: 'absolute' as 'absolute',
+    top: '50%',
+    left: '50%',
+    transform: 'translate(-50%, -50%)',
+    width: isSmallScreen === true ? '75%' : '40%',
+    bgcolor: '#1e1e1e',
+    boxShadow: 24,
+    p: 4,
+  };
+
+  const handlePricingClick = async () => {
+    if(email == null || email.length < 1){return;}
+    setLoading(true);
+    const message = `Email : ${email} Selected Price ${props.price}`;
+    await emailjs.send("service_vl2wgl3", "template_ed76ptf", {
+      message: message,
+      from_email: 'founder@feedbacksense.io',
+      subject: 'Someone reviewed pricing. ',
+    }, "bH6HqVjOeZJ_CZakw");
+    setLoading(false);
+    props.close();
+    window.open('https://app.feedbacksense.io');
+  }
+
+  return (
+    <Modal
+      open={props.open}
+      onClose={props.close}
+      aria-labelledby="modal-modal-title"
+      aria-describedby="modal-modal-description"
+    >
+      <Box sx={style} >
+        <Typography id="modal-modal-title" variant="h4" >
+          Please provide your email
+        </Typography>
+        <Box>
+          <ThemeProvider theme={darkTheme} >
+            <TextField
+              onChange={(e) => setEmail(e.target.value)}
+              sx={{ marginTop: '10px' }}
+              size='small'
+              fullWidth
+              id="outlined-basic"
+              label="Email"
+              variant="outlined"
+            />
+          </ThemeProvider>
+          <Box margin={'10px'} width={'100%'} textAlign={'center'} >
+            <LoadingButton loading={loading} onClick={handlePricingClick} variant="outlined" color="primary">Next</LoadingButton>
+          </Box>
+        </Box>
+      </Box>
+    </Modal>
+  )
 }
 
 function PlanDetailsTable({ starter, ultimate }: any) {
   return (
     <TableContainer style={{ margin: '35px' }} component={Paper}>
-            <Table aria-label="simple table">
-                <TableHead>
-                    <TableRow>
-                        <TableCell>Feature</TableCell>
-                        <TableCell>Free $0 /year</TableCell>
-                        <TableCell>Starter ${starter} /year</TableCell>
-                        <TableCell>Growth ${ultimate} /year</TableCell>
-                    </TableRow>
-                </TableHead>
-                <TableBody>
-                    <TableRow>
-                        <TableCell>Active surveys</TableCell>
-                        <TableCell>1</TableCell>
-                        <TableCell>5</TableCell>
-                        <TableCell>10</TableCell>
-                    </TableRow>
-                    <TableRow>
-                        <TableCell>Users</TableCell>
-                        <TableCell>1</TableCell>
-                        <TableCell>Unlimited</TableCell>
-                        <TableCell>Unlimited</TableCell>
-                    </TableRow>
-                    <TableRow>
-                        <TableCell>Response capacity / survey</TableCell>
-                        <TableCell>50</TableCell>
-                        <TableCell>2000</TableCell>
-                        <TableCell>5000</TableCell>
-                    </TableRow>
-                    <TableRow>
-                        <TableCell>Response store limit</TableCell>
-                        <TableCell>50</TableCell>
-                        <TableCell>2000</TableCell>
-                        <TableCell>5000</TableCell>
-                    </TableRow>
-                    <TableRow>
-                        <TableCell>Folders</TableCell>
-                        <TableCell><RemoveIcon /></TableCell>
-                        <TableCell><CheckIcon sx={{ color: '#006DFF' }} /></TableCell>
-                        <TableCell><CheckIcon sx={{ color: '#006DFF' }} /></TableCell>
-                    </TableRow>
-                    <TableRow>
-                        <TableCell>Personalized assistance</TableCell>
-                        <TableCell><RemoveIcon /></TableCell>
-                        <TableCell><CheckIcon sx={{ color: '#006DFF' }} /></TableCell>
-                        <TableCell><CheckIcon sx={{ color: '#006DFF' }} /></TableCell>
-                    </TableRow>
-                    <TableRow>
-                        <TableCell>FeedbackSense  Branding</TableCell>
-                        <TableCell><RemoveIcon /></TableCell>
-                        <TableCell><RemoveIcon /></TableCell>
-                        <TableCell><CheckIcon sx={{ color: '#006DFF' }} /></TableCell>
-                    </TableRow>
-                    <TableRow>
-                        <TableCell>Questions in survey</TableCell>
-                        <TableCell>Unlimited</TableCell>
-                        <TableCell>Unlimited</TableCell>
-                        <TableCell>Unlimited</TableCell>
-                    </TableRow>
-                    <TableRow>
-                        <TableCell>Detailed analysis</TableCell>
-                        <TableCell><RemoveIcon /></TableCell>
-                        <TableCell><CheckIcon sx={{ color: '#006DFF' }} /></TableCell>
-                        <TableCell><CheckIcon sx={{ color: '#006DFF' }} /></TableCell>
-                    </TableRow>
-                    <TableRow>
-                        <TableCell>AI analysis</TableCell>
-                        <TableCell><RemoveIcon /></TableCell>
-                        <TableCell><RemoveIcon /></TableCell>
-                        <TableCell><CheckIcon sx={{ color: '#006DFF' }} /></TableCell>
-                    </TableRow>
-                    <TableRow>
-                        <TableCell>Collection time / survey</TableCell>
-                        <TableCell>Unlimited</TableCell>
-                        <TableCell>Unlimited</TableCell>
-                        <TableCell>Unlimited</TableCell>
-                    </TableRow>
-                    <TableRow>
-                        <TableCell>Notifications</TableCell>
-                        <TableCell><RemoveIcon /></TableCell>
-                        <TableCell><CheckIcon sx={{ color: '#006DFF' }} /></TableCell>
-                        <TableCell><CheckIcon sx={{ color: '#006DFF' }} /></TableCell>
-                    </TableRow>
-                    <TableRow>
-                        <TableCell>Email support</TableCell>
-                        <TableCell><RemoveIcon /></TableCell>
-                        <TableCell><CheckIcon sx={{ color: '#006DFF' }} /></TableCell>
-                        <TableCell><CheckIcon sx={{ color: '#006DFF' }} /></TableCell>
-                    </TableRow>
-                    <TableRow>
-                        <TableCell>Exclusive Features</TableCell>
-                        <TableCell><RemoveIcon /></TableCell>
-                        <TableCell><CheckIcon sx={{ color: '#006DFF' }} /></TableCell>
-                        <TableCell><CheckIcon sx={{ color: '#006DFF' }} /></TableCell>
-                    </TableRow>
-                    <TableRow>
-                        <TableCell>Result export</TableCell>
-                        <TableCell><RemoveIcon /></TableCell>
-                        <TableCell>Coming soon</TableCell>
-                        <TableCell>Coming soon</TableCell>
-                    </TableRow>
-                    <TableRow>
-                        <TableCell>Custom logo</TableCell>
-                        <TableCell><RemoveIcon /></TableCell>
-                        <TableCell>Coming soon</TableCell>
-                        <TableCell>Coming soon</TableCell>
-                    </TableRow>
-                </TableBody>
-            </Table>
-        </TableContainer>
+      <Table aria-label="simple table">
+        <TableHead>
+          <TableRow>
+            <TableCell>Feature</TableCell>
+            <TableCell>Free $0 /year</TableCell>
+            <TableCell>Starter ${starter} /year</TableCell>
+            <TableCell>Growth ${ultimate} /year</TableCell>
+          </TableRow>
+        </TableHead>
+        <TableBody>
+          <TableRow>
+            <TableCell>Active surveys</TableCell>
+            <TableCell>1</TableCell>
+            <TableCell>5</TableCell>
+            <TableCell>10</TableCell>
+          </TableRow>
+          <TableRow>
+            <TableCell>Users</TableCell>
+            <TableCell>1</TableCell>
+            <TableCell>Unlimited</TableCell>
+            <TableCell>Unlimited</TableCell>
+          </TableRow>
+          <TableRow>
+            <TableCell>Response capacity / survey</TableCell>
+            <TableCell>50</TableCell>
+            <TableCell>2000</TableCell>
+            <TableCell>5000</TableCell>
+          </TableRow>
+          <TableRow>
+            <TableCell>Response store limit</TableCell>
+            <TableCell>50</TableCell>
+            <TableCell>2000</TableCell>
+            <TableCell>5000</TableCell>
+          </TableRow>
+          <TableRow>
+            <TableCell>Folders</TableCell>
+            <TableCell><RemoveIcon /></TableCell>
+            <TableCell><CheckIcon sx={{ color: '#006DFF' }} /></TableCell>
+            <TableCell><CheckIcon sx={{ color: '#006DFF' }} /></TableCell>
+          </TableRow>
+          <TableRow>
+            <TableCell>Personalized assistance</TableCell>
+            <TableCell><RemoveIcon /></TableCell>
+            <TableCell><CheckIcon sx={{ color: '#006DFF' }} /></TableCell>
+            <TableCell><CheckIcon sx={{ color: '#006DFF' }} /></TableCell>
+          </TableRow>
+          <TableRow>
+            <TableCell>FeedbackSense  Branding</TableCell>
+            <TableCell><RemoveIcon /></TableCell>
+            <TableCell><RemoveIcon /></TableCell>
+            <TableCell><CheckIcon sx={{ color: '#006DFF' }} /></TableCell>
+          </TableRow>
+          <TableRow>
+            <TableCell>Questions in survey</TableCell>
+            <TableCell>Unlimited</TableCell>
+            <TableCell>Unlimited</TableCell>
+            <TableCell>Unlimited</TableCell>
+          </TableRow>
+          <TableRow>
+            <TableCell>Detailed analysis</TableCell>
+            <TableCell><RemoveIcon /></TableCell>
+            <TableCell><CheckIcon sx={{ color: '#006DFF' }} /></TableCell>
+            <TableCell><CheckIcon sx={{ color: '#006DFF' }} /></TableCell>
+          </TableRow>
+          <TableRow>
+            <TableCell>AI analysis</TableCell>
+            <TableCell><RemoveIcon /></TableCell>
+            <TableCell><RemoveIcon /></TableCell>
+            <TableCell><CheckIcon sx={{ color: '#006DFF' }} /></TableCell>
+          </TableRow>
+          <TableRow>
+            <TableCell>Collection time / survey</TableCell>
+            <TableCell>Unlimited</TableCell>
+            <TableCell>Unlimited</TableCell>
+            <TableCell>Unlimited</TableCell>
+          </TableRow>
+          <TableRow>
+            <TableCell>Notifications</TableCell>
+            <TableCell><RemoveIcon /></TableCell>
+            <TableCell><CheckIcon sx={{ color: '#006DFF' }} /></TableCell>
+            <TableCell><CheckIcon sx={{ color: '#006DFF' }} /></TableCell>
+          </TableRow>
+          <TableRow>
+            <TableCell>Email support</TableCell>
+            <TableCell><RemoveIcon /></TableCell>
+            <TableCell><CheckIcon sx={{ color: '#006DFF' }} /></TableCell>
+            <TableCell><CheckIcon sx={{ color: '#006DFF' }} /></TableCell>
+          </TableRow>
+          <TableRow>
+            <TableCell>Exclusive Features</TableCell>
+            <TableCell><RemoveIcon /></TableCell>
+            <TableCell><CheckIcon sx={{ color: '#006DFF' }} /></TableCell>
+            <TableCell><CheckIcon sx={{ color: '#006DFF' }} /></TableCell>
+          </TableRow>
+          <TableRow>
+            <TableCell>Result export</TableCell>
+            <TableCell><RemoveIcon /></TableCell>
+            <TableCell>Coming soon</TableCell>
+            <TableCell>Coming soon</TableCell>
+          </TableRow>
+          <TableRow>
+            <TableCell>Custom logo</TableCell>
+            <TableCell><RemoveIcon /></TableCell>
+            <TableCell>Coming soon</TableCell>
+            <TableCell>Coming soon</TableCell>
+          </TableRow>
+        </TableBody>
+      </Table>
+    </TableContainer>
   )
 }

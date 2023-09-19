@@ -20,8 +20,8 @@ export default function Support(props: any) {
   };
 
   const [loading, setLoading] = useState(false);
-  const [alertType,setAlertType] = useState<'success' | 'error'>('success');
-  const [alertMessage,setAlertMessage] = useState<string>('');
+  const [alertType, setAlertType] = useState<'success' | 'error'>('success');
+  const [alertMessage, setAlertMessage] = useState<string>('');
   const [showAlert, setShowAlert] = useState(false);
   const [email, setEmail] = useState('');
   const [subject, setSubject] = useState('');
@@ -61,85 +61,85 @@ export default function Support(props: any) {
         data-url="https://calendly.com/feedbacksense/demo?primary_color=006dff"
         style={{minWidth : '320px',height : '700px'}}
       ></div> */}
-    <section>
-      <ThemeProvider theme={createTheme({ palette: { mode: 'dark' } })} >
-        <Box width={'60%'} margin={'auto'} marginTop={'10%'} marginBottom={'10%'} >
-          <Snackbar open={showAlert} autoHideDuration={6000} onClose={handleClose}>
-            <Alert severity={alertType}>{alertMessage}</Alert>
-          </Snackbar>
-          <Typography fontSize={40} >Contact Us</Typography>
-          <Typography color={'#808080'} >
-            Got a technical issue? Want to send feedback about a beta feature? Need details about our Business plan? Let us know.
-          </Typography>
-          <Box marginTop={'20px'} marginBottom={'20px'} >
-            <TextField onChange={(e) => setEmail(e.target.value)} size='small' fullWidth label="Your email" ></TextField>
+      <section>
+        <ThemeProvider theme={createTheme({ palette: { mode: 'dark' } })} >
+          <Box width={'60%'} margin={'auto'} marginTop={'10%'} marginBottom={'10%'} >
+            <Snackbar open={showAlert} autoHideDuration={6000} onClose={handleClose}>
+              <Alert severity={alertType}>{alertMessage}</Alert>
+            </Snackbar>
+            <Typography fontSize={40} >Contact Us</Typography>
+            <Typography color={'#808080'} >
+              Got a technical issue? Want to send feedback about a beta feature? Need details about our Business plan? Let us know.
+            </Typography>
+            <Box marginTop={'20px'} marginBottom={'20px'} >
+              <TextField onChange={(e) => setEmail(e.target.value)} size='small' fullWidth label="Your email" ></TextField>
+            </Box>
+            <Box marginBottom={'20px'} >
+              <TextField onChange={(e) => setSubject(e.target.value)} size='small' fullWidth label="Subject" ></TextField>
+            </Box>
+            <Box marginBottom={'20px'} >
+              <TextField onChange={(e) => setMessage(e.target.value)} size='small' fullWidth label="Message" multiline ></TextField>
+            </Box>
+            <Box>
+              <LoadingButton
+                onClick={handleSubmit}
+                variant='outlined'
+                loading={loading}
+              >
+                Submit
+              </LoadingButton>
+              {/* <button onClick={handleSubmit} className='contained-button' >Submit</button> */}
+            </Box>
           </Box>
-          <Box marginBottom={'20px'} >
-            <TextField onChange={(e) => setSubject(e.target.value)} size='small' fullWidth label="Subject" ></TextField>
-          </Box>
-          <Box marginBottom={'20px'} >
-            <TextField onChange={(e) => setMessage(e.target.value)} size='small' fullWidth label="Message" multiline ></TextField>
-          </Box>
-          <Box>
-            <LoadingButton
-              onClick={handleSubmit}
-              variant='outlined'
-              loading={loading}
-            >
-              Submit
-            </LoadingButton>
-            {/* <button onClick={handleSubmit} className='contained-button' >Submit</button> */}
-          </Box>
-        </Box>
-      </ThemeProvider>
-      
-      <Container maxWidth="lg" sx={{ textAlign: 'start', width: '60%', margin: 'auto' }} >
-        <Box py={10}>
-          <Grid container spacing={6}>
-            <Grid item xs={12} md={4} >
-              <Typography variant="h6" component="h2" gutterBottom={true}>{content['header']}</Typography>
-              <Typography variant="subtitle1" color="#808080" paragraph={true}>{content['description']}</Typography>
-            </Grid>
-            <Grid item xs={12} sm={6} md={4}>
-              <div >
-                <Box display="flex">
+        </ThemeProvider>
+
+        <Container maxWidth="lg" sx={{ textAlign: 'start', width: '60%', margin: 'auto' }} >
+          <Box py={10}>
+            <Grid container spacing={6}>
+              <Grid item xs={12} md={4} >
+                <Typography variant="h6" component="h2" gutterBottom={true}>{content['header']}</Typography>
+                <Typography variant="subtitle1" color="#808080" paragraph={true}>{content['description']}</Typography>
+              </Grid>
+              <Grid item xs={12} sm={6} md={4}>
+                <div >
+                  <Box display="flex">
+                    <div>
+                      <Avatar >
+                        <EmailIcon color="primary" fontSize="small" />
+                      </Avatar>
+                    </div>
+                    <Box ml={2}>
+                      <Typography variant="h6" gutterBottom={true}>{content['contact2']}</Typography>
+                      <Typography variant="body2" color="#808080">{content['contact2-desc']}</Typography>
+                    </Box>
+                  </Box>
+                </div>
+              </Grid>
+              <Grid item xs={12} sm={6} md={4}>
+                <Box display="flex" mb={3}>
                   <div>
                     <Avatar >
-                      <EmailIcon color="primary" fontSize="small" />
+                      <WebAssetIcon color="primary" fontSize="small" />
                     </Avatar>
                   </div>
                   <Box ml={2}>
-                    <Typography variant="h6" gutterBottom={true}>{content['contact2']}</Typography>
-                    <Typography variant="body2" color="#808080">{content['contact2-desc']}</Typography>
+                    <Typography variant="h6" gutterBottom={true}>{content['contact3']}</Typography>
+                    <IconButton href="https://www.facebook.com/profile.php?id=100093644569497" color="inherit">
+                      <FacebookIcon />
+                    </IconButton>
+                    <IconButton href="https://twitter.com/Feedback_Sense" color="inherit">
+                      <TwitterIcon />
+                    </IconButton>
+                    <IconButton href="#" color="inherit">
+                      <LinkedInIcon />
+                    </IconButton>
                   </Box>
                 </Box>
-              </div>
+              </Grid>
             </Grid>
-            <Grid item xs={12} sm={6} md={4}>
-              <Box display="flex" mb={3}>
-                <div>
-                  <Avatar >
-                    <WebAssetIcon color="primary" fontSize="small" />
-                  </Avatar>
-                </div>
-                <Box ml={2}>
-                  <Typography variant="h6" gutterBottom={true}>{content['contact3']}</Typography>
-                  <IconButton href="https://www.facebook.com/profile.php?id=100093644569497" color="inherit">
-                    <FacebookIcon />
-                  </IconButton>
-                  <IconButton href="https://twitter.com/Feedback_Sense" color="inherit">
-                    <TwitterIcon />
-                  </IconButton>
-                  <IconButton href="#" color="inherit">
-                    <LinkedInIcon />
-                  </IconButton>
-                </Box>
-              </Box>
-            </Grid>
-          </Grid>
-        </Box>
-      </Container>
-    </section>
+          </Box>
+        </Container>
+      </section>
     </>
   );
 }
