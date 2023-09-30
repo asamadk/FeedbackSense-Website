@@ -11,6 +11,8 @@ import Footer from './Components/Footer';
 import About from './Layouts/About';
 import Privacy from './Layouts/Privacy';
 import Licensing from './Layouts/Licensing';
+import Blogs from './Layouts/Blogs';
+import SingleBlogDetail from './Components/Blogs/SingleBlogDetail';
 
 function App() {
 
@@ -40,6 +42,14 @@ function App() {
           <Route
             path='/support'
             element={<Support />}
+          />
+          <Route
+            path='/blogs'
+            element={<Blogs />}
+          />
+          <Route
+            path='/blog/:slug'
+            element={<SingleBlogDetail />}
           />
           <Route
             path='/about'

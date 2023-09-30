@@ -7,6 +7,7 @@ import Typewriter from "typewriter-effect";
 import PlayArrowIcon from '@mui/icons-material/PlayArrow';
 import Differentiator from '../Components/Differentiator'
 import ComponentsDisplay from '../Components/ComponentsDisplay'
+import FindUs from '../Components/FindUs'
 
 function Home() {
   return (
@@ -18,6 +19,7 @@ function Home() {
       <MainBody />
       <ComponentsDisplay/>
       <CallToAction />
+      {/* <FindUs/> */}
     </>
   )
 }

@@ -11,6 +11,7 @@ import ListItemButton from '@mui/material/ListItemButton';
 import ListItemText from '@mui/material/ListItemText';
 import HomeIcon from '@mui/icons-material/Home';
 import Inventory2Icon from '@mui/icons-material/Inventory2';
+import EditNoteIcon from '@mui/icons-material/EditNote';
 import AttachMoneyIcon from '@mui/icons-material/AttachMoney';
 import CallIcon from '@mui/icons-material/Call';
 
@@ -21,15 +22,18 @@ const marginTabStyle = {
     cursor: 'pointer',
     marginTop: '10px',
     padding: '10px',
-    paddingTop: 0
+    paddingTop: 0,
+    fontWeight: 800
 }
 
 const selectedTab = {
     marginRight: '20px',
     cursor: 'pointer',
-    backgroundColor: '#323533',
-    borderRadius: '10px',
-    padding: '10px'
+    // backgroundColor: '#323533',
+    // borderRadius: '10px',
+    padding: '10px',
+    color: '#006dff',
+    fontWeight: 800
 }
 
 function Header() {
@@ -48,6 +52,8 @@ function Header() {
             setSelectedTab(2);
         } else if (pathName === '/support') {
             setSelectedTab(3);
+        } else if(pathName.includes('/blog')){
+            setSelectedTab(4);
         }
     }
 
@@ -66,6 +72,8 @@ function Header() {
             navigate('/pricing');
         } else if (value === 3) {
             navigate('/support');
+        } else if (value === 4) {
+            navigate('/blogs');
         }
     }
 
@@ -74,16 +82,16 @@ function Header() {
     }
 
     const handleBookMeeting = () => {
-        window.open('https://calendly.com/feedbacksense/demo','__blank');
+        window.open('https://calendly.com/feedbacksense/demo', '__blank');
     }
 
     return (
         <>
             {isSmallScreen === false ?
-                <Box 
-                    display={'flex'} 
-                    sx={{backgroundColor : '#1e1e1e'}}
-                    justifyContent={'space-between'} 
+                <Box
+                    display={'flex'}
+                    sx={{ backgroundColor: '#1e1e1e' }}
+                    justifyContent={'space-between'}
                     // padding={'10px'} 
                     // margin={'10px'} 
                     borderBottom={'0.5px #454545 solid'}
@@ -93,14 +101,15 @@ function Header() {
                     width="100%" // <-- This line sets the width to cover the entire viewport width
                     zIndex="999" // <-- This line ensures that the header stays on top of other content
                     top={0} // <-- This line positions the header at the top of the page
-                    // left={0} // <-- This line positions the header at the left edge of the page
+                // left={0} // <-- This line positions the header at the left edge of the page
                 >
-                    <Box sx={{marginLeft : '10px'}} ><Logo /></Box>
+                    <Box sx={{ marginLeft: '10px' }} ><Logo /></Box>
                     <Box display={'flex'} >
                         <Box sx={selectedTabVal === 0 ? selectedTab : marginTabStyle} onClick={() => handleTabClick(0)}>Home</Box>
                         <Box sx={selectedTabVal === 1 ? selectedTab : marginTabStyle} onClick={() => handleTabClick(1)}>Product</Box>
                         <Box sx={selectedTabVal === 2 ? selectedTab : marginTabStyle} onClick={() => handleTabClick(2)}>Pricing</Box>
                         <Box sx={selectedTabVal === 3 ? selectedTab : marginTabStyle} onClick={() => handleTabClick(3)}>Support</Box>
+                        <Box sx={selectedTabVal === 4 ? selectedTab : marginTabStyle} onClick={() => handleTabClick(4)}>Blog</Box>
                     </Box>
                     <Box>
                         <button onClick={handleStartFreePlan} style={{ marginRight: '10px' }} className='outlined-button' >
@@ -110,7 +119,7 @@ function Header() {
                             Book a demo
                         </button>
                     </Box>
-                </Box> : <SmallScreenHeader handleClick={handleTabClick} />    
+                </Box> : <SmallScreenHeader handleClick={handleTabClick} />
             }
         </>
     )
@@ -125,7 +134,7 @@ function SmallScreenHeader(props: any) {
     }
 
     const handleBookMeeting = () => {
-        window.open('https://calendly.com/feedbacksense/demo','__blank');
+        window.open('https://calendly.com/feedbacksense/demo', '__blank');
     }
 
     const [state, setState] = React.useState({
@@ -157,30 +166,31 @@ function SmallScreenHeader(props: any) {
             onKeyDown={toggleDrawer(anchor, false)}
         >
             <List>
-                {['Home', 'Product', 'Pricing', 'Support'].map((text, index) => (
+                {['Home', 'Product', 'Pricing', 'Support', 'Blog'].map((text, index) => (
                     <ListItem key={text} >
                         <ListItemButton onClick={() => props.handleClick(index)} >
-                            {index === 0 && <HomeIcon sx={{marginRight : '10px'}} />}
-                            {index === 1 && <Inventory2Icon sx={{marginRight : '10px'}} />}
-                            {index === 2 && <AttachMoneyIcon sx={{marginRight : '10px'}} />}
-                            {index === 3 && <CallIcon sx={{marginRight : '10px'}} />}
+                            {index === 0 && <HomeIcon sx={{ marginRight: '10px' }} />}
+                            {index === 1 && <Inventory2Icon sx={{ marginRight: '10px' }} />}
+                            {index === 2 && <AttachMoneyIcon sx={{ marginRight: '10px' }} />}
+                            {index === 3 && <CallIcon sx={{ marginRight: '10px' }} />}
+                            {index === 4 && <EditNoteIcon sx={{ marginRight: '10px' }} />}
                             <ListItemText primary={text} />
                         </ListItemButton>
                     </ListItem>
                 ))}
             </List>
             <Box paddingLeft={'25px'} width={'100%'} marginBottom={'10px'}>
-                <button onClick={handleBookMeeting} style={{width : '140px'}} className='outlined-button' >
+                <button onClick={handleBookMeeting} style={{ width: '140px' }} className='outlined-button' >
                     Book a meeting
                 </button>
             </Box>
             <Box paddingLeft={'25px'} marginBottom={'10px'}>
-                <button onClick={handleStartFreePlan} style={{width : '140px'}} className='contained-button' >
+                <button onClick={handleStartFreePlan} style={{ width: '140px' }} className='contained-button' >
                     Go to app
                 </button>
             </Box>
-            <Box sx={{position : 'absolute',bottom : '0'}} > 
-                <Logo/>
+            <Box sx={{ position: 'absolute', bottom: '0' }} >
+                <Logo />
             </Box>
         </Box>
     );
@@ -195,7 +205,7 @@ function SmallScreenHeader(props: any) {
                     <MenuIcon sx={{ color: '#ffffff' }} />
                 </IconButton>
             </Box>
-            <ThemeProvider theme={createTheme({palette : {mode : 'dark'}})} >
+            <ThemeProvider theme={createTheme({ palette: { mode: 'dark' } })} >
                 <Drawer
                     anchor={'right'}
                     open={state['right']}
