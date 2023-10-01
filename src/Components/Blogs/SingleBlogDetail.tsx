@@ -5,6 +5,7 @@ import sanityClient from '../../Utils/Sanity';
 import { useParams } from 'react-router';
 import FSLoader from '../FSLoader';
 import { Box, useMediaQuery } from '@mui/material';
+import { setDocumentTitle } from '../../Utils/DOMUtils';
 
 const builder = imageUrlBuilder(sanityClient);
 
@@ -40,6 +41,7 @@ function SingleBlogDetail() {
             )
             .then((data) => {
                 setLoading(false);
+                setDocumentTitle(data[0]?.title);
                 return setPostData(data[0])
             })
             .catch(() => {
@@ -58,7 +60,12 @@ function SingleBlogDetail() {
 
     const mainBlogStyle = {
         width : isSmallScreen === false ? '60%' : '100%',
-        margin : 'auto'
+        margin : 'auto',
+        // background : '#454545',
+        padding : '10px',
+        borderRadius : '10px',
+        fontSize : '20px',
+        letterSpacing : 1
     }
 
     return (
@@ -66,7 +73,7 @@ function SingleBlogDetail() {
             <Box>
                 <Box width={isSmallScreen === false ? '50%' : '100%'} margin={'auto'}>
                     <h1>{postData?.title}</h1>
-                    <span style={{color : '#808080'}} >By {postData?.name}.</span>
+                    <span style={{color : '#808080'}} >By {postData?.name}</span>
                     <Box marginTop={'20px'} ></Box>
                 </Box>
                 <Box width={isSmallScreen === false ? '50%' : '100%'} margin={'auto'} >

@@ -31,6 +31,7 @@ function BlogCard({ post }: any) {
     }
 
     const handleBlogClick = () => {
+        document.title = post?.title
         navigate(`/blog/${post.slug.current}`)
     }
 

@@ -14,6 +14,7 @@ import Inventory2Icon from '@mui/icons-material/Inventory2';
 import EditNoteIcon from '@mui/icons-material/EditNote';
 import AttachMoneyIcon from '@mui/icons-material/AttachMoney';
 import CallIcon from '@mui/icons-material/Call';
+import { setDocumentTitle } from '../Utils/DOMUtils';
 
 type Anchor = 'top' | 'left' | 'bottom' | 'right';
 
@@ -46,14 +47,19 @@ function Header() {
         const pathName = window.location.pathname;
         if (pathName === '/') {
             setSelectedTab(0);
+            setDocumentTitle('FeedbackSense | Home');
         } else if (pathName === '/product') {
             setSelectedTab(1);
+            setDocumentTitle('FeedbackSense | Product');
         } else if (pathName === '/pricing') {
             setSelectedTab(2);
+            setDocumentTitle('FeedbackSense | Pricing');
         } else if (pathName === '/support') {
             setSelectedTab(3);
+            setDocumentTitle('FeedbackSense | Support');
         } else if(pathName.includes('/blog')){
             setSelectedTab(4);
+            setDocumentTitle('FeedbackSense | Blog');
         }
     }
 
