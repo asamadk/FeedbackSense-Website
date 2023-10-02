@@ -3,7 +3,7 @@ import React from 'react'
 import InsertLinkIcon from '@mui/icons-material/InsertLink';
 
 const mainContainerCss = {
-    backgroundColor : '#323533', 
+    // backgroundColor : '#323533', 
     width : 'fit-content',
     display : 'flex',
     borderRadius : '10px',

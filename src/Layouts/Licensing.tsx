@@ -3,7 +3,7 @@ import React from 'react'
 
 function Licensing() {
   return (
-    <Box textAlign={'start'} marginTop={'50px'}>
+    <Box textAlign={'start'} marginTop={'10%'}>
       <Box width={'80%'} margin={'auto'}>
         <Typography fontSize={40}>
           Licensing

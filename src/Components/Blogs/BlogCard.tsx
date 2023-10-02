@@ -36,8 +36,13 @@ function BlogCard({ post }: any) {
     }
 
     return (
-        <ThemeProvider theme={createTheme({ palette: { mode: 'dark' } })} >
-            <Card onClick={handleBlogClick} onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseLeave} sx={{ maxWidth: 345, height: '437px', cursor: 'pointer' }}>
+        // <ThemeProvider theme={createTheme({ palette: { mode: 'dark' } })} >
+            <Card 
+                onClick={handleBlogClick} 
+                onMouseEnter={handleMouseEnter} 
+                onMouseLeave={handleMouseLeave} 
+                sx={{ maxWidth: 345, height: '437px', cursor: 'pointer',backgroundColor : '#081213',padding : '0px 20px' }}
+            >
                 <CardMedia
                     component="img"
                     height="194"
@@ -71,7 +76,7 @@ function BlogCard({ post }: any) {
                     }
                 />
             </Card>
-        </ThemeProvider>
+        // </ThemeProvider>
     )
 }
 

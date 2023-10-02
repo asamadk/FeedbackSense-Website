@@ -15,7 +15,6 @@ import Blogs from './Layouts/Blogs';
 import SingleBlogDetail from './Components/Blogs/SingleBlogDetail';
 
 function App() {
-
   const currentTheme = createTheme({
     typography: {
       fontFamily: 'Apercu Pro, sans-serif'

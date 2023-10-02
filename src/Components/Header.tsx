@@ -30,8 +30,6 @@ const marginTabStyle = {
 const selectedTab = {
     marginRight: '20px',
     cursor: 'pointer',
-    // backgroundColor: '#323533',
-    // borderRadius: '10px',
     padding: '10px',
     color: '#006dff',
     fontWeight: 800
@@ -70,6 +68,7 @@ function Header() {
 
     const handleTabClick = (value: number) => {
         setSelectedTab(value);
+        window.scrollTo(0,0);
         if (value === 0) {
             navigate('/');
         } else if (value === 1) {
@@ -96,7 +95,7 @@ function Header() {
             {isSmallScreen === false ?
                 <Box
                     display={'flex'}
-                    sx={{ backgroundColor: '#1e1e1e' }}
+                    sx={{ backgroundColor: '#081213' }}
                     justifyContent={'space-between'}
                     // padding={'10px'} 
                     // margin={'10px'} 
@@ -166,7 +165,7 @@ function SmallScreenHeader(props: any) {
 
     const list = (anchor: Anchor) => (
         <Box
-            sx={{ width: anchor === 'top' || anchor === 'bottom' ? 'auto' : 250 }}
+            sx={{ width: anchor === 'top' || anchor === 'bottom' ? 'auto' : 250,backgroundColor : '#081213',height : '100%' }}
             role="presentation"
             onClick={toggleDrawer(anchor, false)}
             onKeyDown={toggleDrawer(anchor, false)}
@@ -185,7 +184,7 @@ function SmallScreenHeader(props: any) {
                     </ListItem>
                 ))}
             </List>
-            <Box paddingLeft={'25px'} width={'100%'} marginBottom={'10px'}>
+            <Box paddingLeft={'25px'} marginBottom={'10px'}>
                 <button onClick={handleBookMeeting} style={{ width: '140px' }} className='outlined-button' >
                     Book a meeting
                 </button>

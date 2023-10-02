@@ -88,7 +88,7 @@ function Differentiator() {
                     <ArrowBackIosIcon sx={{color : '#006dff'}}/>
                 </IconButton>
                 <Box
-                    sx={{ backgroundColor: '#323533', borderRadius: '10px', transition: '0.3s' }}
+                    sx={{ backgroundColor: '#081213', borderRadius: '10px', transition: '0.3s' }}
                     display={isSmallScreen === false ? 'flex' : 'block'}
                     marginTop={'30px'}
                     justifyContent={'center'}

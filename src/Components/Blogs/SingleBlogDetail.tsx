@@ -82,7 +82,7 @@ function SingleBlogDetail() {
                         <img 
                             style={{width : '100%'}}
                             alt='MainImage' 
-                            src={urlFor(postData?.mainImage?.asset?.url).width(500).url()} 
+                            src={urlFor(postData?.mainImage?.asset?.url).width(1000).url()} 
                         />
                     }
                 </Box>

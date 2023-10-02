@@ -28,6 +28,15 @@ export default function Support(props: any) {
   const [message, setMessage] = useState('');
 
   const handleSubmit = async (event: any) => {
+    if(message.length < 1 || email.length < 1 || email.length < 1){
+      setShowAlert(true);
+      setAlertType('error');
+      setAlertMessage('Please provide all the details.');
+      setTimeout(() => {
+        setShowAlert(false);
+      }, 5000);
+      return;
+    }
     try {
       setLoading(true);
       await emailjs.send("service_vl2wgl3", "template_ed76ptf", {

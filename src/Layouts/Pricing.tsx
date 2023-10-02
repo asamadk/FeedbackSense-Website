@@ -101,7 +101,7 @@ export default function Pricing(props: any) {
           </Box>
           <Grid container spacing={3} >
             <Grid item xs={12} md={4}>
-              <Card sx={{ backgroundColor: '#1e1e1e', color: 'white', border: '1px #808080 solid' }} variant="outlined">
+              <Card sx={{ backgroundColor: '#081213', color: 'white', border: '1px #808080 solid' }} variant="outlined">
                 <CardHeader title={content['01_title']} ></CardHeader>
                 <CardContent>
                   <Box px={1} mb={5} >
@@ -131,7 +131,7 @@ export default function Pricing(props: any) {
               </Card>
             </Grid>
             <Grid item xs={12} md={4}>
-              <Card sx={{ backgroundColor: '#1e1e1e', color: 'white', border: '1px #808080 solid' }} variant="outlined">
+              <Card sx={{ backgroundColor: '#081213', color: 'white', border: '1px #808080 solid' }} variant="outlined">
                 <CardHeader title={content['02_title']} ></CardHeader>
                 <CardContent>
                   <Box px={1} mb={5} >
@@ -161,7 +161,7 @@ export default function Pricing(props: any) {
               </Card>
             </Grid>
             <Grid item xs={12} md={4}>
-              <Card sx={{ backgroundColor: '#1e1e1e', color: 'white', border: '1px #808080 solid' }} variant="outlined">
+              <Card sx={{ backgroundColor: '#081213', color: 'white', border: '1px #808080 solid' }} variant="outlined">
                 <CardHeader title={content['03_title']} ></CardHeader>
                 <CardContent>
                   <Box px={1} mb={5} >
@@ -271,7 +271,7 @@ function EmailModal(props: any) {
 
 function PlanDetailsTable({ starter, ultimate }: any) {
   return (
-    <TableContainer style={{ margin: '35px' }} component={Paper}>
+    <TableContainer style={{ backgroundColor : '#081213' }} component={Paper}>
       <Table aria-label="simple table">
         <TableHead>
           <TableRow>
