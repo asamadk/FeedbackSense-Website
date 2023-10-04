@@ -28,7 +28,7 @@ export default function Pricing(props: any) {
   const [selectedPrice, setSelectedPrice] = useState<null | string>(null);
   const [currency, setCurrency] = useState<'usd' | 'inr'>('usd');
   const [curSym, setCurSym] = useState<'$' | '₹'>('$');
-  const [loading,setLoading] = useState(false);
+  const [loading, setLoading] = useState(false);
 
   const content = {
     'header-p1': 'Simple no-tricks pricing',
