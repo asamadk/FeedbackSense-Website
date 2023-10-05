@@ -146,7 +146,7 @@ export default function Pricing(props: any) {
           <Box mt={5} mb={3} >
             <Container maxWidth="sm">
               <Typography variant="h3" component="h2" gutterBottom={true}>
-                <Typography variant="h3" component="span" color="primary">{content['header-p1']} </Typography>
+                <Typography variant="h3" component="span" color="#006dff">{content['header-p1']} </Typography>
                 <Box sx={{ fontSize: '30px', color: '#006b38ff' }} >
                   <Typewriter
                     onInit={(typewriter) => {
@@ -160,7 +160,22 @@ export default function Pricing(props: any) {
                   />
                 </Box>
               </Typography>
-              <Typography sx={{ color: '#808080' }} variant="subtitle1" color="textSecondary" paragraph={true}>{content['description']}</Typography>
+              <Typography
+                sx={{ color: '#808080' }}
+                variant="subtitle1"
+                color="textSecondary"
+                paragraph={true}
+              >
+                {content['description']}
+              </Typography>
+              <Typography
+                sx={{ color: '#f1f1f1' }}
+                variant="subtitle1"
+                paragraph={true}
+              >
+                or explore our offerings with our  
+                <a style={{color : '#f1f1f1',fontWeight : 700,marginLeft : '5px'}} href='https://app.feedbacksense.io/' > Free plan</a>
+              </Typography>
               <Box sx={{ display: 'flex', justifyContent: 'space-between' }} >
                 <div>
                   <Typography variant="subtitle1" component="span">{content['option1']}</Typography>
