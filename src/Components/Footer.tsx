@@ -1,45 +1,11 @@
-// import { Box, Divider, Typography } from '@mui/material'
-// import React from 'react'
-// import Logo from './Logo'
-// import FavoriteIcon from '@mui/icons-material/Favorite';
-// import CopyrightIcon from '@mui/icons-material/Copyright';
-
-// function Footer() {
-//     return (
-//         <>
-//             <Box padding={'20px'} margin={'20px'} >
-//                 <Box display={'flex'} justifyContent={'space-between'}  >
-//                     <Logo />
-//                     <Box sx={{ cursor: 'pointer' }} display={'flex'} >
-//                         <Typography color={'#808080'} marginRight={'20px'} >About</Typography>
-//                         <Typography color={'#808080'} marginRight={'20px'}>Privacy policy</Typography>
-//                         <Typography color={'#808080'} marginRight={'20px'}>Contact Us</Typography>
-//                         <Typography color={'#808080'} marginRight={'20px'}>Licensing</Typography>
-//                     </Box>
-//                 </Box>
-//                 <Divider sx={{ backgroundColor: '#808080', marginTop: '20px', marginBottom: '20px' }} />
-//                 <Box display={'flex'} justifyContent={'space-between'}  >
-//                     <Typography color={'#808080'} >Terms & Condition</Typography>
-//                     <Typography
-//                         color={'#808080'} >
-//                             With <FavoriteIcon sx={{position : 'relative',top : '5px'}} /> from India 
-//                     </Typography>
-//                     <Typography 
-//                         color={'#808080'} >
-//                             <CopyrightIcon sx={{position : 'relative',top : '6px'}} /> FeedbackSense
-//                     </Typography>
-//                 </Box>
-//             </Box>
-//         </>
-//     )
-// }
-
-// export default Footer
 import FavoriteIcon from '@mui/icons-material/Favorite';
-import { Box, Container, Link, Typography, useMediaQuery } from '@mui/material';
+import { Avatar, Box, Container, Grid, Link, Typography, useMediaQuery } from '@mui/material';
 import React from 'react';
 import Logo from './Logo';
 import { useNavigate } from 'react-router';
+import SocialComponent from './SocialComponent';
+import EmailIcon from '@mui/icons-material/Email';
+import WebAssetIcon from '@mui/icons-material/WebAsset';
 
 export default function Footer(props: any) {
     const navigate = useNavigate();
@@ -52,6 +18,11 @@ export default function Footer(props: any) {
         'link2': 'Privacy Policy',
         'link3': 'Licensing',
         'link4': 'Contact',
+        'header': 'You can reach us at.',
+        'description': 'Feel free to contact us with the listed means as you see fit.',
+        'contact2': 'Email',
+        'contact2-desc': 'founder@feedbacksense.io',
+        'contact3': 'Social Media',
         ...props.content
     };
 
@@ -64,10 +35,48 @@ export default function Footer(props: any) {
     }
 
     return (
-        <footer>
+        <footer >
+            <Container maxWidth="lg" sx={{ textAlign: 'start', width: '60%', margin: 'auto' }} >
+                <Box py={5}>
+                    <Grid container spacing={6}>
+                        <Grid item xs={12} md={4} >
+                            <Typography variant="h6" component="h2" gutterBottom={true}>{content['header']}</Typography>
+                            <Typography variant="subtitle1" color="#808080" paragraph={true}>{content['description']}</Typography>
+                        </Grid>
+                        <Grid item xs={12} sm={6} md={4}>
+                            <div >
+                                <Box display="flex">
+                                    <div>
+                                        <Avatar >
+                                            <EmailIcon color="primary" fontSize="small" />
+                                        </Avatar>
+                                    </div>
+                                    <Box ml={2}>
+                                        <Typography variant="h6" gutterBottom={true}>{content['contact2']}</Typography>
+                                        <Typography variant="body2" color="#808080">{content['contact2-desc']}</Typography>
+                                    </Box>
+                                </Box>
+                            </div>
+                        </Grid>
+                        <Grid item xs={12} sm={6} md={4}>
+                            <Box display="flex" mb={3}>
+                                <div>
+                                    <Avatar >
+                                        <WebAssetIcon color="primary" fontSize="small" />
+                                    </Avatar>
+                                </div>
+                                <Box ml={2}>
+                                    <Typography variant="h6" gutterBottom={true}>{content['contact3']}</Typography>
+                                    <SocialComponent />
+                                </Box>
+                            </Box>
+                        </Grid>
+                    </Grid>
+                </Box>
+            </Container>
             <Container sx={{ color: '#808080' }} maxWidth="lg">
                 <Box py={6} display={isSmallScreen === false ? 'flex' : 'block'} flexWrap="wrap" alignItems="center" justifyContent={'space-between'}>
-                    <Box width={'200px'}  margin={isSmallScreen === true ? 'auto' : '0'}>
+                    <Box width={'200px'} margin={isSmallScreen === true ? 'auto' : '0'}>
                         <Logo />
                     </Box>
                     <Box component="nav">
@@ -84,6 +93,7 @@ export default function Footer(props: any) {
                 color={'#808080'} >
                 With <FavoriteIcon sx={{ position: 'relative', top: '5px' }} /> from India
             </Typography>
+            {/* <SocialComponent/> */}
         </footer>
     );
 }

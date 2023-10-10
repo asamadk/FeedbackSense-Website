@@ -3,10 +3,10 @@ import React from 'react'
 import InsertLinkIcon from '@mui/icons-material/InsertLink';
 
 const mainContainerCss = {
-    // backgroundColor : '#323533', 
+    backgroundColor : '#212a2b', 
     width : 'fit-content',
     display : 'flex',
-    borderRadius : '10px',
+    borderRadius : '5px',
     padding : '5px 12px'
 }
 
