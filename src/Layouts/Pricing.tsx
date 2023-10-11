@@ -60,7 +60,8 @@ export default function Pricing(props: any) {
     '03_benefit1': '10 Active Surveys',
     '03_benefit2': '10 Users',
     '03_benefit3': '10000 Response / month',
-    '03_benefit4': 'AI assisted analysis',
+    // '03_benefit4': 'AI assisted analysis',
+    '03_benefit4': 'Word Cloud',
     '03_primary-action': 'Select Plan',
     '03_secondary-action': 'Learn more',
     'free-trial': '7 days free trial',
@@ -173,8 +174,15 @@ export default function Pricing(props: any) {
                 variant="subtitle1"
                 paragraph={true}
               >
-                or explore our offerings with our  
-                <a style={{color : '#f1f1f1',fontWeight : 700,marginLeft : '5px'}} href='https://app.feedbacksense.io/' > Free plan</a>
+                or explore our offerings with our
+                <a style={{ color: '#f1f1f1', fontWeight: 700, marginLeft: '5px' }} href='https://app.feedbacksense.io/' > Free plan</a>
+              </Typography>
+              <Typography
+                sx={{ color: '#f1f1f1' }}
+                variant="subtitle1"
+                paragraph={true}
+              >
+                No credit card required
               </Typography>
               <Box sx={{ display: 'flex', justifyContent: 'space-between' }} >
                 <div>
@@ -257,6 +265,11 @@ export default function Pricing(props: any) {
               </Card>
             </Grid>
           </Grid>
+          <Box sx={{ backgroundColor: '#212a2b', borderRadius: '5px', marginTop: '20px',padding : '10px' }} >
+            <Typography color={'#006dff'} variant="subtitle1" component="p">
+              {`For additional users, it's just ${curSym}${curSym === '$' ? 4.99 : 199}/user on top of your chosen plan.`}
+            </Typography>
+          </Box>
         </Box>
       </Container>
       <ThemeProvider theme={darkTheme} >

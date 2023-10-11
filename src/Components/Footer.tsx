@@ -22,7 +22,7 @@ export default function Footer(props: any) {
         'description': 'Feel free to contact us with the listed means as you see fit.',
         'contact2': 'Email',
         'contact2-desc': 'founder@feedbacksense.io',
-        'contact3': 'Social Media',
+        'contact3': 'Follow us',
         ...props.content
     };
 
