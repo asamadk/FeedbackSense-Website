@@ -23,7 +23,7 @@ export default function Support(props: any) {
   const [message, setMessage] = useState('');
 
   const handleSubmit = async (event: any) => {
-    if(message.length < 1 || email.length < 1 || email.length < 1){
+    if (message.length < 1 || email.length < 1 || email.length < 1) {
       setShowAlert(true);
       setAlertType('error');
       setAlertMessage('Please provide all the details.');
@@ -65,6 +65,8 @@ export default function Support(props: any) {
         data-url="https://calendly.com/feedbacksense/demo?primary_color=006dff"
         style={{minWidth : '320px',height : '700px'}}
       ></div> */}
+      <script src="https://desk.zoho.in/portal/api/feedbackwidget/127804000000182282?orgId=60024635560&displayType=embeded"></script>
+      <div id="zsfeedbackwidgetdiv"></div>
       <section>
         <ThemeProvider theme={createTheme({ palette: { mode: 'dark' } })} >
           <Box width={'60%'} margin={'auto'} marginTop={'10%'} marginBottom={'10%'} >

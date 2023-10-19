@@ -13,6 +13,7 @@ import Privacy from './Layouts/Privacy';
 import Licensing from './Layouts/Licensing';
 import Blogs from './Layouts/Blogs';
 import SingleBlogDetail from './Components/Blogs/SingleBlogDetail';
+import Ticket from './Layouts/Ticket';
 
 function App() {
   const currentTheme = createTheme({
@@ -41,6 +42,10 @@ function App() {
           <Route
             path='/support'
             element={<Support />}
+          />
+          <Route
+            path='/ticket'
+            element={<Ticket />}
           />
           <Route
             path='/blogs'

@@ -18,6 +18,7 @@ export default function Footer(props: any) {
         'link2': 'Privacy Policy',
         'link3': 'Licensing',
         'link4': 'Contact',
+        'link5': 'Create a ticket',
         'header': 'You can reach us at.',
         'description': 'Feel free to contact us with the listed means as you see fit.',
         'contact2': 'Email',
@@ -84,6 +85,7 @@ export default function Footer(props: any) {
                         <Link href="/privacy-policy" variant="body1" style={{ marginRight: '20px' }}>{content['link2']}</Link>
                         <Link href="/licensing" variant="body1" style={{ marginRight: '20px' }} >{content['link3']}</Link>
                         <Link href="/support" variant="body1" style={{ marginRight: '20px' }} >{content['link4']}</Link>
+                        <Link href="/ticket" variant="body1" style={{ marginRight: '20px' }} >{content['link5']}</Link>
                     </Box>
                     <Typography component="p" variant="caption" gutterBottom={false}>{content['copy']}</Typography>
                 </Box>
