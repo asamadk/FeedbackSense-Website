@@ -36,7 +36,7 @@ function ComponentsDisplay() {
     }
 
     return (
-        <Box marginBottom={'10%'} >
+        <Box marginTop={'100px'} marginBottom={'10%'} >
             <Typography variant='h3' >Grasp Your Survey Insights Instantly.</Typography>
             <ToggleButtonGroup
                 exclusive
@@ -58,7 +58,8 @@ function ComponentsDisplay() {
                                 backgroundColor: '#006dff', // for the hover state
                             },
                         }
-                    }
+                    },
+                    width : isSmallScreen === true ? '90%' : 'auto'
                 }}
             >
                 <ToggleButton sx={{ width: '100px' }} value="0">Responses</ToggleButton>

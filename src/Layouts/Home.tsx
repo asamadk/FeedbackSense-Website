@@ -8,6 +8,8 @@ import PlayArrowIcon from '@mui/icons-material/PlayArrow';
 import Differentiator from '../Components/Differentiator'
 import ComponentsDisplay from '../Components/ComponentsDisplay'
 import FindUs from '../Components/FindUs'
+import SingleReviewComponent from '../Components/SingleReviewComponent'
+import FAQComponent from '../Components/FAQComponent'
 
 function Home() {
   return (
@@ -17,7 +19,14 @@ function Home() {
       <Differentiator />
       <Divider sx={{ backgroundColor: '#808080', marginBottom: '20px' }} />
       <MainBody />
+      <SingleReviewComponent 
+        message='"Its evident how thoughtfully FeedbackSense addresses our needs, even aspects we had not considered.
+                A game-changer for our day-to-day work."' 
+        author='Mita Radhakrishnan'
+        from='Auroville Language Laboratory'
+      />
       <ComponentsDisplay/>
+      <FAQComponent/>
       <CallToAction />
       {/* <FindUs/> */}
     </>
