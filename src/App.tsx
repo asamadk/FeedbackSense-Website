@@ -15,6 +15,9 @@ import Blogs from './Layouts/Blogs';
 import SingleBlogDetail from './Components/Blogs/SingleBlogDetail';
 import Ticket from './Layouts/Ticket';
 import { Helmet } from 'react-helmet';
+import Termscondition from './Layouts/termscondition';
+import RefundPolicy from './Layouts/RefundPolicy';
+import ActivationPolicy from './Layouts/ActivationPolicy';
 
 function App() {
   const currentTheme = createTheme({
@@ -68,6 +71,18 @@ function App() {
           <Route
             path='/privacy-policy'
             element={<Privacy />}
+          />
+          <Route
+            path='/terms-conditions'
+            element={<Termscondition />}
+          />
+          <Route
+            path='/refund-policy'
+            element={<RefundPolicy />}
+          />
+          <Route
+            path='/activation-policy'
+            element={<ActivationPolicy />}
           />
           <Route
             path='/licensing'

@@ -94,9 +94,14 @@ export default function Support(props: any) {
               >
                 Submit
               </LoadingButton>
-              {/* <button onClick={handleSubmit} className='contained-button' >Submit</button> */}
             </Box>
           </Box>
+          {/* <Box>
+          <Typography color={'#808080'} >
+              For any technical issues please create a ticket.
+            </Typography>
+            <button onClick={handleSubmit} className='contained-button' >Create a ticket</button>
+          </Box> */}
         </ThemeProvider>
       </section>
     </>

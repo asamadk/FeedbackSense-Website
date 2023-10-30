@@ -19,6 +19,10 @@ export default function Footer(props: any) {
         'link3': 'Licensing',
         'link4': 'Contact',
         'link5': 'Create a ticket',
+        'link6': 'Terms & Conditions',
+        'link7': 'Refund Policy',
+        'link8': 'Activation Policy',
+        // 'link5': 'Create a ticket',
         'header': 'You can reach us at.',
         'description': 'Feel free to contact us with the listed means as you see fit.',
         'contact2': 'Email',
@@ -80,12 +84,15 @@ export default function Footer(props: any) {
                     <Box width={'200px'} margin={isSmallScreen === true ? 'auto' : '0'}>
                         <Logo />
                     </Box>
-                    <Box component="nav">
+                    <Box component="nav" margin={'auto'} maxWidth={'50%'} >
                         <Link href="/about" variant="body1" style={{ marginRight: '20px' }} >{content['link1']}</Link>
                         <Link href="/privacy-policy" variant="body1" style={{ marginRight: '20px' }}>{content['link2']}</Link>
                         <Link href="/licensing" variant="body1" style={{ marginRight: '20px' }} >{content['link3']}</Link>
                         <Link href="/support" variant="body1" style={{ marginRight: '20px' }} >{content['link4']}</Link>
                         <Link href="/ticket" variant="body1" style={{ marginRight: '20px' }} >{content['link5']}</Link>
+                        <Link href="/terms-conditions" variant="body1" style={{ marginRight: '20px' }} >{content['link6']}</Link>
+                        <Link href="/refund-policy" variant="body1" style={{ marginRight: '20px' }} >{content['link7']}</Link>
+                        <Link href="/activation-policy" variant="body1" style={{ marginRight: '20px' }} >{content['link8']}</Link>
                     </Box>
                     <Typography component="p" variant="caption" gutterBottom={false}>{content['copy']}</Typography>
                 </Box>

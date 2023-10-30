@@ -15,68 +15,82 @@ function Privacy() {
         </Typography>
         <Box marginTop={'20px'}></Box>
         <Typography variant='h6' color={'#006DFF'} >
-          Information Collection
+          1. Information We Collect
         </Typography>
         <Typography color={'#808080'} >
-          We may collect personal information from you when you sign up for an account, create surveys, and use our application. The types of information we may collect include your name, email address, and any other information you choose to provide.
+          When you visit our website or use our software, we may collect the following personal information from you:
+          <ul>
+            <li>Name</li>
+            <li>Email address</li>
+            <li>Contact number</li>
+            <li>Any feedback or comments you provide via our platform</li>
+          </ul>
         </Typography>
 
         <Typography variant='h6' color={'#006DFF'} >
-          Use of Information
+          2. How We Collect Information
         </Typography>
         <Typography color={'#808080'} >
-          We use the information collected to provide and improve our services, personalize your experience, communicate with you, and analyze survey responses. We may also use your information to send you important updates, notifications, and promotional materials related to our services.
+          We collect information directly from you when you:
+          <ul>
+            <li>Sign up for an account</li>
+            <li>Provide feedback or fill out forms on our website</li>
+            <li>Contact our customer support</li>
+          </ul>
+          Additionally, we use cookies and similar technologies to enhance your user experience and gather data on how you interact with our website and software.
+          <ul></ul>
         </Typography>
 
         <Typography variant='h6' color={'#006DFF'} >
-          Information Sharing
+          3. How We Use Collected Information
         </Typography>
         <Typography color={'#808080'} >
-          We do not sell, rent, or lease your personal information to third parties. However, we may share your information with trusted third-party service providers who assist us in operating our application, conducting business activities, or servicing you, as long as they agree to keep the information confidential.
+          Your personal information is used for:
+          <ul>
+            <li>Account setup and management</li>
+            <li>Responding to your queries or feedback</li>
+            <li>Sending updates or relevant information about our software</li>
+            <li>Enhancing our software and customizing your experience</li>
+            <li>Analyzing usage to better understand our users and improve our offerings</li>
+          </ul>
         </Typography>
 
         <Typography variant='h6' color={'#006DFF'} >
-          Data Security
+          4. Protecting Your Information
         </Typography>
         <Typography color={'#808080'} >
-          We take the security of your personal information seriously and have implemented appropriate technical and organizational measures to protect it against unauthorized access, disclosure, alteration, or destruction. We regularly review and enhance our security practices to ensure the ongoing integrity of your data.
+          We prioritize the safety of your personal information:
+          <ul>
+            <li>We employ industry-standard encryption techniques for safeguarding your data.</li>
+            <li>We periodically review our data collection and storage practices to guard against unauthorized access.</li>
+            <li>We do not store sensitive personal information like credit card numbers.</li>
+          </ul>
         </Typography>
 
         <Typography variant='h6' color={'#006DFF'} >
-          Data Retention
+          5. Sharing Your Information
         </Typography>
         <Typography color={'#808080'} >
-          We retain your personal information for as long as necessary to fulfill the purposes for which it was collected, or as required by law. If you no longer wish to use our services, you can request the deletion of your account and associated data.
+          We do not sell or trade your personal data. However:
+          <ul>
+            <li>We may share your information with third parties who provide services on our behalf, such as email hosting or server hosting. These third parties are prohibited from using your data for any purpose other than to provide the services requested by us.</li>
+            <li>We may disclose your information if required by law or in response to legal processes.</li>
+          </ul>
         </Typography>
-
         <Typography variant='h6' color={'#006DFF'} >
-          Cookies and Tracking Technologies
+          6. Changes to This Policy
         </Typography>
         <Typography color={'#808080'} >
-          We may use cookies and similar tracking technologies to enhance your experience on our website and application. These technologies help us understand how you interact with our services, improve functionality, and provide personalized content.
+          Feedback Software reserves the right to modify this Privacy Policy at any time. Please review it occasionally. Your continued use of our website or software after the Privacy Policy has been updated implies your acceptance of the revised terms.
+          <ul></ul>
         </Typography>
-
-        <Typography variant='h6' color={'#006DFF'} >
-          Third-Party Links
-        </Typography>
-        <Typography color={'#808080'} >
-          Our application may contain links to third-party websites or services. We are not responsible for the privacy practices or content of these third-party sites. We encourage you to review their privacy policies before providing any personal information.
-        </Typography>
-
-        <Typography variant='h6' color={'#006DFF'} >
-          Changes to this Privacy Policy
-        </Typography>
-        <Typography color={'#808080'} >
-          We may update this Privacy Policy from time to time. Any changes will be posted on our website, and the revised version will be effective immediately upon posting. We encourage you to review this policy periodically to stay informed about how we collect, use, and protect your information.
-        </Typography>
-
         <Typography variant='h6' color={'#006DFF'} >
           Contact Us
         </Typography>
         <Typography color={'#808080'} >
           If you have any questions, concerns, or requests regarding our Privacy Policy or the handling of your personal information, please contact our support team. We are committed to addressing your inquiries and resolving any issues promptly.
         </Typography>
-        <Divider sx={{margin : '20px',bgcolor : '#808080'}} />
+        <Divider sx={{ margin: '20px', bgcolor: '#808080' }} />
         <Typography color={'#808080'} >
           By using FeedbackSense, you acknowledge that you have read and understood this Privacy Policy and agree to the collection, use, and disclosure of your information as described herein.
         </Typography>

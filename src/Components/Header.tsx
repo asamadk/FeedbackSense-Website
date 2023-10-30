@@ -45,19 +45,19 @@ function Header() {
         const pathName = window.location.pathname;
         if (pathName === '/') {
             setSelectedTab(0);
-            setDocumentTitle('FeedbackSense | Home');
+            // setDocumentTitle('FeedbackSense | Home');
         } else if (pathName === '/product') {
             setSelectedTab(1);
-            setDocumentTitle('FeedbackSense | Product');
+            // setDocumentTitle('FeedbackSense | Product');
         } else if (pathName === '/pricing') {
             setSelectedTab(2);
-            setDocumentTitle('FeedbackSense | Pricing');
+            // setDocumentTitle('FeedbackSense | Pricing');
         } else if (pathName === '/support') {
             setSelectedTab(3);
-            setDocumentTitle('FeedbackSense | Support');
+            // setDocumentTitle('FeedbackSense | Support');
         } else if(pathName.includes('/blog')){
             setSelectedTab(4);
-            setDocumentTitle('FeedbackSense | Blog');
+            // setDocumentTitle('FeedbackSense | Blog');
         }
     }
 
