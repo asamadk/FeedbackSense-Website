@@ -14,6 +14,7 @@ import Licensing from './Layouts/Licensing';
 import Blogs from './Layouts/Blogs';
 import SingleBlogDetail from './Components/Blogs/SingleBlogDetail';
 import Ticket from './Layouts/Ticket';
+import { Helmet } from 'react-helmet';
 
 function App() {
   const currentTheme = createTheme({
@@ -24,6 +25,11 @@ function App() {
 
   return (
     <div className="App">
+      <Helmet>
+                <title>FeedbackSense – Free Online Survey & Form Builder</title>
+                <meta name="description" content="Create powerful no-code surveys & forms with FeedbackSense. Seamless surveys, dynamic forms & deep data analysis." />
+                <meta name="keywords" content="Online Form Builder, Survey Builder India, Free Survey Tool" />
+            </Helmet>
       <ThemeProvider theme={currentTheme} >
         <Header />
         <Routes>

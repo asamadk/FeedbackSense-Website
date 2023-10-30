@@ -12,6 +12,9 @@ import NotificationsIcon from '@mui/icons-material/Notifications';
 import Diversity1Icon from '@mui/icons-material/Diversity1';
 import ImportExportIcon from '@mui/icons-material/ImportExport';
 import AttachMoneyIcon from '@mui/icons-material/AttachMoney';
+import LockOpenIcon from '@mui/icons-material/LockOpen';
+import VisibilityOffIcon from '@mui/icons-material/VisibilityOff';
+import QuizIcon from '@mui/icons-material/Quiz';
 
 function Product() {
   return (
@@ -137,8 +140,6 @@ function MidSection2() {
             <Avatar sx={{ bgcolor: '#006DFF', width: '100px', height: '100px', margin: 'auto', marginTop: '80px' }} >
               <SignalCellularAltIcon sx={{ fontSize: '40px' }} />
             </Avatar>
-            {/* <Typography fontSize={20} marginTop={'10px'} >Real-time sentiment analysis</Typography> */}
-            {/* <Typography fontSize={14} color={'#808080'} >Understand the overall sentiment of customer feedback in real-time.</Typography> */}
             <Typography fontSize={20} marginTop={'10px'} >Skip Logic</Typography>
             <Typography fontSize={14} color={'#808080'} >Dynamically guide respondents through your survey based on their answers, ensuring only relevant questions are displayed.</Typography>
           </Box>
@@ -156,7 +157,8 @@ function MidSection2() {
             <Typography fontSize={20} marginTop={'10px'} >Customizable feedback</Typography>
             <Typography fontSize={14} color={'#808080'} >Design feedback forms that match your brand and gather the data you need.</Typography>
           </Box>
-        </Box><Box
+        </Box>
+        <Box
           width={isSmallScreen === false ? '30%' : '100%'}
           marginRight={isSmallScreen === false ? '20px' : '0'}
           borderRadius={'10px'}
@@ -169,7 +171,8 @@ function MidSection2() {
             <Typography fontSize={20} marginTop={'10px'} >Survey Folders</Typography>
             <Typography fontSize={14} color={'#808080'} >Stay organized and manage your surveys efficiently with our survey folders feature.</Typography>
           </Box>
-        </Box><Box
+        </Box>
+        {/* <Box
           width={isSmallScreen === false ? '30%' : '100%'}
           marginRight={isSmallScreen === false ? '20px' : '0'}
           borderRadius={'10px'}
@@ -182,7 +185,54 @@ function MidSection2() {
             <Typography fontSize={20} marginTop={'10px'} >User-friendly dashboard and interface</Typography>
             <Typography fontSize={14} color={'#808080'} >Access all your feedback data and features in an easy-to-use dashboard with drag and drop functionality</Typography>
           </Box>
-        </Box><Box
+        </Box> */}
+        <Box
+          width={isSmallScreen === false ? '30%' : '100%'}
+          marginRight={isSmallScreen === false ? '20px' : '0'}
+          borderRadius={'10px'}
+          marginTop={'20px'}
+        >
+          <Box textAlign={'center'} >
+            <Avatar sx={{ bgcolor: '#006DFF', width: '100px', height: '100px', margin: 'auto', marginTop: '80px' }} >
+              <QuizIcon sx={{ fontSize: '40px' }} />
+            </Avatar>
+            <Typography fontSize={20} marginTop={'10px'} >Anonymous Surveys</Typography>
+            <Typography fontSize={14} color={'#808080'} >Unlock the best value for your money with our pricing plans. We offer competitive pricing that are designed to fit your budget.</Typography>
+          </Box>
+        </Box>
+        <Box
+          width={isSmallScreen === false ? '30%' : '100%'}
+          marginRight={isSmallScreen === false ? '20px' : '0'}
+          borderRadius={'10px'}
+          marginTop={'20px'}
+        >
+          <Box textAlign={'center'} >
+            <Avatar sx={{ bgcolor: '#006DFF', width: '100px', height: '100px', margin: 'auto', marginTop: '80px' }} >
+              <VisibilityOffIcon sx={{ fontSize: '40px' }} />
+            </Avatar>
+            <Typography fontSize={20} marginTop={'10px'} >No Third Party Trackers</Typography>
+            <Typography fontSize={14} color={'#808080'} >
+              At FeedbackSense, we prioritize your data's integrity and security. Enjoy peace of mind knowing that your surveys are free from external tracking interference.
+            </Typography>
+          </Box>
+        </Box>
+        <Box
+          width={isSmallScreen === false ? '30%' : '100%'}
+          marginRight={isSmallScreen === false ? '20px' : '0'}
+          borderRadius={'10px'}
+          marginTop={'20px'}
+        >
+          <Box textAlign={'center'} >
+            <Avatar sx={{ bgcolor: '#006DFF', width: '100px', height: '100px', margin: 'auto', marginTop: '80px' }} >
+              <LockOpenIcon sx={{ fontSize: '40px' }} />
+            </Avatar>
+            <Typography fontSize={20} marginTop={'10px'} >Unrestricted Data Access</Typography>
+            <Typography fontSize={14} color={'#808080'} >
+              At FeedbackSense, we believe in transparent and open access to your insights. Our commitment ensures that you can access your survey data freely without any hidden charges.
+            </Typography>
+          </Box>
+        </Box>
+        <Box
           width={isSmallScreen === false ? '30%' : '100%'}
           marginRight={isSmallScreen === false ? '20px' : '0'}
           borderRadius={'10px'}
@@ -195,7 +245,8 @@ function MidSection2() {
             <Typography fontSize={20} marginTop={'10px'} >Reporting and analytics</Typography>
             <Typography fontSize={14} color={'#808080'} >Analyze feedback data and get insights into customer satisfaction, trends, and areas for improvement.</Typography>
           </Box>
-        </Box><Box
+        </Box>
+        {/* <Box
           width={isSmallScreen === false ? '30%' : '100%'}
           marginRight={isSmallScreen === false ? '20px' : '0'}
           borderRadius={'10px'}
@@ -208,7 +259,8 @@ function MidSection2() {
             <Typography fontSize={20} marginTop={'10px'} >Automated alerts and notifications</Typography>
             <Typography fontSize={14} color={'#808080'} >Get alerts and notifications when new feedback is received or when certain criteria are met.</Typography>
           </Box>
-        </Box><Box
+        </Box> */}
+        <Box
           width={isSmallScreen === false ? '30%' : '100%'}
           marginRight={isSmallScreen === false ? '20px' : '0'}
           borderRadius={'10px'}
@@ -218,8 +270,6 @@ function MidSection2() {
             <Avatar sx={{ bgcolor: '#006DFF', width: '100px', height: '100px', margin: 'auto', marginTop: '80px' }} >
               <Diversity1Icon sx={{ fontSize: '40px' }} />
             </Avatar>
-            {/* <Typography fontSize={20} marginTop={'10px'} >Custom logo</Typography> */}
-            {/* <Typography fontSize={14} color={'#808080'} >Our custom logo design service offers a tailored and professional solution to help your brand stand out.</Typography> */}
             <Typography fontSize={20} marginTop={'10px'} >Templates</Typography>
             <Typography fontSize={14} color={'#808080'} >Pre-designed layouts and content structures to quickly start and customize your surveys effortlessly</Typography>
           </Box>
@@ -233,12 +283,11 @@ function MidSection2() {
             <Avatar sx={{ bgcolor: '#006DFF', width: '100px', height: '100px', margin: 'auto', marginTop: '80px' }} >
               <ImportExportIcon sx={{ fontSize: '40px' }} />
             </Avatar>
-            {/* <Typography fontSize={20} marginTop={'10px'} >Export results</Typography>
-            <Typography fontSize={14} color={'#808080'} >Export your results effortlessly with our intuitive export feature.</Typography> */}
             <Typography fontSize={20} marginTop={'10px'} >Drag & Drop Survey Builder</Typography>
             <Typography fontSize={14} color={'#808080'} > Intuitively create and organize your surveys with a seamless drag-and-drop interface.</Typography>
           </Box>
-        </Box><Box
+        </Box>
+        {/* <Box
           width={isSmallScreen === false ? '30%' : '100%'}
           marginRight={isSmallScreen === false ? '20px' : '0'}
           borderRadius={'10px'}
@@ -251,7 +300,7 @@ function MidSection2() {
             <Typography fontSize={20} marginTop={'10px'} >Unbeatable pricing</Typography>
             <Typography fontSize={14} color={'#808080'} >Unlock the best value for your money with our pricing plans. We offer competitive pricing that are designed to fit your budget.</Typography>
           </Box>
-        </Box>
+        </Box> */}
       </Box>
     </Box>
   )
