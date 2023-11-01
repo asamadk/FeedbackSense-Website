@@ -1,3 +1,5 @@
+export const SUPPORT_MAIL = 'support@feedbacksense.io';
+
 export const faqs = [
     {
         name : 'How do I get started with FeedbackSense?',

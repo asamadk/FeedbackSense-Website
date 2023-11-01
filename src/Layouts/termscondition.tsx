@@ -1,5 +1,6 @@
 import { Box, Divider, Typography } from '@mui/material'
 import React from 'react'
+import { SUPPORT_MAIL } from '../Utils/FAQConstants'
 
 function Termscondition() {
     return (
@@ -20,7 +21,7 @@ function Termscondition() {
                 <Typography color={'#808080'} >
                     <ul>
                         <li>Address : Bangalore , India</li>
-                        <li>Email : founder@feedbacksense.io</li>
+                        <li>Email : {SUPPORT_MAIL} </li>
                         <li>Phone : 7007475550</li>
                     </ul>
                 </Typography>

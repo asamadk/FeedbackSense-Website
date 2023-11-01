@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import emailjs from 'emailjs-com';
 import LoadingButton from '@mui/lab/LoadingButton';
 import { Alert, Box, Snackbar, TextField, ThemeProvider, Typography, createTheme, makeStyles } from '@mui/material';
+import { SUPPORT_MAIL } from '../Utils/FAQConstants';
 
 export default function Support(props: any) {
 
@@ -9,7 +10,7 @@ export default function Support(props: any) {
     'header': 'You can reach us at.',
     'description': 'Feel free to contact us with the listed means as you see fit.',
     'contact2': 'Email',
-    'contact2-desc': 'founder@feedbacksense.io',
+    'contact2-desc': SUPPORT_MAIL,
     'contact3': 'Social Media',
     ...props.content
   };

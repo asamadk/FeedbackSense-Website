@@ -8,6 +8,7 @@ import { LoadingButton } from '@mui/lab';
 import { featureList } from '../Utils/PriceConstants';
 import axios from 'axios';
 import FSLoader from '../Components/FSLoader';
+import { SUPPORT_MAIL } from '../Utils/FAQConstants';
 
 const darkTheme = createTheme({
   palette: {
@@ -312,7 +313,7 @@ function EmailModal(props: any) {
     const message = `Email : ${email} Selected Price ${props.price} using currency ${props.currency}`;
     await emailjs.send("service_vl2wgl3", "template_ed76ptf", {
       message: message,
-      from_email: 'founder@feedbacksense.io',
+      from_email: SUPPORT_MAIL,
       subject: 'Someone reviewed pricing. ',
     }, "bH6HqVjOeZJ_CZakw");
     setLoading(false);

@@ -1,5 +1,6 @@
 import { Box, Typography } from '@mui/material'
 import React from 'react'
+import { SUPPORT_MAIL } from '../Utils/FAQConstants'
 
 function ActivationPolicy() {
   return (
@@ -68,7 +69,7 @@ function ActivationPolicy() {
                 </Typography>
                 <Typography color={'#808080'} >
                     If you encounter any issues during the delivery or activation process, 
-                    please reach out to our support team at founder@feedbacksense.io. We aim to respond and resolve all queries within 24-48 hours.
+                    please reach out to our support team at {SUPPORT_MAIL}. We aim to respond and resolve all queries within 24-48 hours.
                     <ul></ul>
                 </Typography>
                 <Typography variant='h6' color={'#006DFF'} >

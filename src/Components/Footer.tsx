@@ -6,6 +6,7 @@ import { useNavigate } from 'react-router';
 import SocialComponent from './SocialComponent';
 import EmailIcon from '@mui/icons-material/Email';
 import WebAssetIcon from '@mui/icons-material/WebAsset';
+import { SUPPORT_MAIL } from '../Utils/FAQConstants';
 
 export default function Footer(props: any) {
     const navigate = useNavigate();
@@ -26,7 +27,7 @@ export default function Footer(props: any) {
         'header': 'You can reach us at.',
         'description': 'Feel free to contact us with the listed means as you see fit.',
         'contact2': 'Email',
-        'contact2-desc': 'founder@feedbacksense.io',
+        'contact2-desc': SUPPORT_MAIL,
         'contact3': 'Follow us',
         ...props.content
     };

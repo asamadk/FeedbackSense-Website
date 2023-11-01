@@ -1,5 +1,6 @@
 import { Box, Divider, Typography } from '@mui/material'
 import React from 'react'
+import { SUPPORT_MAIL } from '../Utils/FAQConstants'
 
 function RefundPolicy() {
     return (
@@ -28,7 +29,7 @@ function RefundPolicy() {
                 <Typography color={'#808080'} >
                     To initiate a refund:
                     <ul>
-                        <li>Please contact us at founder@feedbacksense.io</li>
+                        <li>Please contact us at {SUPPORT_MAIL}</li>
                         <li>Provide your order number, and clearly state your reason for refund.</li>
                         <li>Wait for a confirmation email with further instructions on the refund.</li>
                     </ul>
