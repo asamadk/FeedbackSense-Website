@@ -42,7 +42,6 @@
 
     <!-- Template Main CSS File -->
     <link href="assets/css/main.css" rel="stylesheet" />
-
   </head>
 
   <body>
@@ -529,6 +528,19 @@
         monthlyRadio.addEventListener("change", updatePricing);
         annualRadio.addEventListener("change", updatePricing);
       });
+    </script>
+    <script
+      async
+      src="https://www.googletagmanager.com/gtag/js?id=G-TDTES7PL5H"
+    ></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag("js", new Date());
+
+      gtag("config", "G-TDTES7PL5H");
     </script>
   </body>
 </html>
