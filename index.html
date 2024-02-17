@@ -4,7 +4,7 @@
     <meta charset="utf-8" />
     <meta content="width=device-width, initial-scale=1.0" name="viewport" />
 
-    <title>FeedbackSense – Free Online Survey & Form Builder</title>
+    <title>FeedbackSense</title>
     <meta
       name="description"
       content="Create powerful no-code surveys & forms with FeedbackSense. Seamless surveys, dynamic forms & deep data analysis."
@@ -14,11 +14,9 @@
       content="Online Form Builder, Survey Builder India, Free Survey Tool"
     />
 
-    <link rel="canonical" href="https://feedbacksense.io/index.html" />
-
     <!-- Favicons -->
-    <link href="assets/img/Logo_Transparent.ico" rel="icon" />
-    <link href="assets/img/favicon.png" rel="apple-touch-icon" />
+    <link href="assets/images/favicon.ico" rel="icon" />
+    <link href="assets/images/fs_logo_small.png" rel="apple-touch-icon" />
 
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -27,26 +25,24 @@
       href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,600;1,700&family=Poppins:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&family=Inter:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap"
       rel="stylesheet"
     />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"
+    />
 
-    <!-- Vendor CSS Files -->
     <link
-      href="assets/vendor/bootstrap/css/bootstrap.min.css"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
       rel="stylesheet"
+      integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
+      crossorigin="anonymous"
     />
-    <link
-      href="assets/vendor/bootstrap-icons/bootstrap-icons.css"
-      rel="stylesheet"
-    />
-    <link
-      href="assets/vendor/fontawesome-free/css/all.min.css"
-      rel="stylesheet"
-    />
-    <link
-      href="assets/vendor/glightbox/css/glightbox.min.css"
-      rel="stylesheet"
-    />
-    <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet" />
-    <link href="assets/vendor/aos/aos.css" rel="stylesheet" />
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+      crossorigin="anonymous"
+    ></script>
+    
+    <script async data-id="4287224381" id="chatling-embed-script" type="text/javascript" src="https://chatling.ai/js/embed.js"></script>
 
     <!-- Template Main CSS File -->
     <link href="assets/css/main.css" rel="stylesheet" />
@@ -90,546 +86,377 @@
       ></iframe
     ></noscript>
     <!-- End Google Tag Manager (noscript) -->
-    <!-- ======= Header ======= -->
-    <header
-      style="position: absolute"
-      id="header"
-      class="header d-flex align-items-center fixed-top"
-    >
-      <div
-        class="container-fluid container-xl d-flex align-items-center justify-content-between"
-      >
-        <a href="index.html" class="logo d-flex align-items-center">
-          <div style="display: flex">
-            <h1 style="color: #006dff">Feedback</h1>
-            <img src="assets/img/latest/Logo_Transparent.png" alt="" />
-            <h1>sense</h1>
-          </div>
-        </a>
 
-        <i class="mobile-nav-toggle mobile-nav-show bi bi-list"></i>
-        <i class="mobile-nav-toggle mobile-nav-hide d-none bi bi-x"></i>
-        <nav id="navbar" class="navbar">
-          <ul>
-            <li><a href="index.html" class="active">Home</a></li>
-            <li><a href="services.html">Product</a></li>
-            <li><a href="pricing.html">Pricing</a></li>
-            <li><a href="contact.html">Contact</a></li>
-            <li><a href="about.html">About</a></li>
-            <li class="dropdown">
-              <a href="#"
-                ><span>Resources</span>
-                <i class="bi bi-chevron-down dropdown-indicator"></i
-              ></a>
-              <ul>
-                <li><a href="/blogs.html">Blogs</a></li>
-                <li><a href="faq.html">FAQs</a></li>
-                <!-- <li class="dropdown"><a href="#"><span>Deep Drop Down</span> <i class="bi bi-chevron-down dropdown-indicator"></i></a>
-                <ul>
-                  <li><a href="#">Deep Drop Down 1</a></li>
-                  <li><a href="#">Deep Drop Down 2</a></li>
-                  <li><a href="#">Deep Drop Down 3</a></li>
-                  <li><a href="#">Deep Drop Down 4</a></li>
-                  <li><a href="#">Deep Drop Down 5</a></li>
-                </ul>
-              </li> -->
+    <!-- header starts -->
+    <header>
+      <div class="header-container">
+        <div class="header-sub-container">
+          <div class="logo-container">
+            <img
+              class="logo-img"
+              src="assets/images/fs_logo_small.png"
+              alt="Logo"
+            />
+            <p>feedbacksense</p>
+          </div>
+          <div>
+            <ul class="header-text-container">
+              <li><a href="/index.html">Home</a></li>
+              <li><a href="/product.html">Product</a></li>
+              <!-- <li><a href="/blogs.html">Resources</a></li> -->
+              <li><a href="/pricing.html">Pricing</a></li>
+              <li><a href="/support.html">Support</a></li>
+              <li><a href="https://help.feedbacksense.io/">Docs</a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="header-button-container">
+          <button id="login-button" class="button-outlined">Login</button>
+          <button id="demo-button" class="button-contained">Book a demo</button>
+        </div>
+      </div>
+      <div class="mobile-header">
+        <div class="logo-container">
+          <img
+            class="logo-img"
+            src="assets/images/fs_logo_small.png"
+            alt="Logo"
+          />
+          <p>feedbacksense</p>
+        </div>
+        <i
+          style="font-size: 35px"
+          data-bs-toggle="offcanvas"
+          data-bs-target="#offcanvasRight"
+          class="bi bi-list"
+        ></i>
+        <div
+          class="offcanvas offcanvas-end"
+          tabindex="-1"
+          id="offcanvasRight"
+          aria-labelledby="offcanvasRightLabel"
+        >
+          <div class="offcanvas-header">
+            <h5 id="offcanvasRightLabel">FeedbackSense</h5>
+            <button
+              type="button"
+              class="btn-close text-reset"
+              data-bs-dismiss="offcanvas"
+              aria-label="Close"
+            ></button>
+          </div>
+          <div class="offcanvas-body">
+            <div>
+              <ul class="header-text-container-mobile">
+                <li><a href="/index.html">Home</a></li>
+                <li><a href="/product.html">Product</a></li>
+                <!-- <li><a href="/blogs.html">Resources</a></li> -->
+                <li><a href="/pricing.html">Pricing</a></li>
+                <li><a href="/support.html">Support</a></li>
+                <li><a href="https://help.feedbacksense.io/">Docs</a></li>
               </ul>
-            </li>
-            <li>
-              <a class="get-a-quote" href="get-a-quote.html">Book a Demo</a>
-            </li>
-            <li>
-              <a
-                class="login"
-                href="https://app.feedbacksense.io/"
-                target="_blank"
-                >Login</a
-              >
-            </li>
-          </ul>
-        </nav>
-        <!-- .navbar -->
+              <div>
+                <button id="login-button" class="button-outlined mobile-button">
+                  Login
+                </button>
+                <a href="/book-a-demo.html">
+                  <button
+                    id="live-demo-button-2"
+                    class="button-contained mobile-button"
+                  >
+                    Book a demo
+                  </button>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
     </header>
-    <!-- End Header -->
+    <!-- header ends -->
 
-    <!-- ======= Hero Section ======= -->
-    <section id="hero" class="hero d-flex align-items-center">
-      <div class="container">
-        <div class="blob">
-          <svg
-            xmlns:xlink="http://www.w3.org/1999/xlink"
-            version="1.1"
-            xmlns="http://www.w3.org/2000/svg"
-            viewBox="0 0 310 350"
-          >
-            <path
-              d="M156.4,339.5c31.8-2.5,59.4-26.8,80.2-48.5c28.3-29.5,40.5-47,56.1-85.1c14-34.3,20.7-75.6,2.3-111  c-18.1-34.8-55.7-58-90.4-72.3c-11.7-4.8-24.1-8.8-36.8-11.5l-0.9-0.9l-0.6,0.6c-27.7-5.8-56.6-6-82.4,3c-38.8,13.6-64,48.8-66.8,90.3c-3,43.9,17.8,88.3,33.7,128.8c5.3,13.5,10.4,27.1,14.9,40.9C77.5,309.9,111,343,156.4,339.5z"
-            />
-          </svg>
-        </div>
-        <div class="blob2">
-          <svg
-            xmlns:xlink="http://www.w3.org/1999/xlink"
-            version="1.1"
-            xmlns="http://www.w3.org/2000/svg"
-            viewBox="0 0 310 350"
-          >
-            <path
-              d="M156.4,339.5c31.8-2.5,59.4-26.8,80.2-48.5c28.3-29.5,40.5-47,56.1-85.1c14-34.3,20.7-75.6,2.3-111  c-18.1-34.8-55.7-58-90.4-72.3c-11.7-4.8-24.1-8.8-36.8-11.5l-0.9-0.9l-0.6,0.6c-27.7-5.8-56.6-6-82.4,3c-38.8,13.6-64,48.8-66.8,90.3c-3,43.9,17.8,88.3,33.7,128.8c5.3,13.5,10.4,27.1,14.9,40.9C77.5,309.9,111,343,156.4,339.5z"
-            />
-          </svg>
-        </div>
-        <div class="row gy-4 d-flex justify-content-between">
-          <div
-            class="col-lg-6 order-2 order-lg-1 d-flex flex-column justify-content-center"
-          >
-            <h2 data-aos="fade-up">
-              Empower Your Feedback - Intuitively, Intelligently, Affordably
-            </h2>
-            <ul data-aos="fade-up" data-aos-delay="100">
-              <li>Drag & Drop Surveys: Easy, visual survey creation.</li>
-              <li>AI-Powered Insights: Smart analysis for deep insights.</li>
-              <li>Cost-Effective: Premium features, friendly pricing.</li>
-            </ul>
-
-            <form
-              action="#"
-              class="form-search d-flex align-items-stretch mb-3"
-              data-aos="fade-up"
-              data-aos-delay="200"
+    <!-- hero start -->
+    <hero class="hero-container">
+      <div class="left-container">
+        <h1>Turning Customer Feedback into Lasting Loyalty</h1>
+        <!-- <h1>Supercharge Your Feedback Game!</h1> -->
+        <!-- <p>Some really meaning ful text that helps explain our product</p> -->
+        <p>
+          FeedbackSense turns every customer feedback into intelligent insights
+          for your CS teams - Spot churn signals, address customer issues
+          proactively, and boost satisfaction.
+        </p>
+        <div>
+          <a href="/book-a-demo.html" >
+            <button
+              style="width: 180px"
+              id="demo-button"
+              class="button-contained mobile-button"
             >
-              <input
-                type="text"
-                class="form-control"
-                placeholder="Business email"
-              />
-              <!-- href="https://app.feedbacksense.io/" -->
-              <a
-                href="free-trail-online-survey-tool.html"
-                class="btn btn-primary"
-              >
-                Free Trial
-              </a>
-            </form>
+              <i
+                style="font-size: 30px; color: #ffffff"
+                class="bi bi-skip-end-btn-fill"
+              ></i>
+              <span style="position: relative; bottom: 5px">Get a live demo</span>
+            </button>
+          </a>
+          <a href="/pricing.html">
+            <button
+              style="width: 180px"
+              id="demo-button"
+              class="button-contained mobile-button"
+            >
+              <i
+                style="font-size: 30px; color: #ffffff"
+                class="bi bi-currency-exchange"
+              ></i>
+              <span style="position: relative; bottom: 5px">See pricing</span>
+            </button>
+          </a>
+        </div>
+      </div>
+      <div class="right-container">
+        <img src="assets/images/design-files/hero.png" alt="Hero" />
+      </div>
+    </hero>
+    <!-- hero end -->
 
-            <div class="row gy-4" data-aos="fade-up" data-aos-delay="400">
-              <div class="col-lg-3 col-6">
-                <div class="stats-item text-center w-100 h-100">
-                  <span
-                    data-purecounter-start="0"
-                    data-purecounter-end="100"
-                    data-purecounter-duration="1"
-                    class="purecounter"
-                  ></span>
-                  <p>Happy Customers</p>
-                </div>
-              </div>
-              <!-- End Stats Item -->
+    <div class="separator"></div>
 
-              <div class="col-lg-3 col-6">
-                <div class="stats-item text-center w-100 h-100">
-                  <span
-                    data-purecounter-start="0"
-                    data-purecounter-end="15"
-                    data-purecounter-duration="1"
-                    class="purecounter"
-                  ></span>
-                  <p>Countries Reached</p>
-                </div>
-              </div>
-              <!-- End Stats Item -->
+    <!-- testimonial start -->
+    <testimonial class="testimonial-main-container">
+      <h2>Hear from our customers</h2>
+      <div class="testimonial-container">
+        <div class="testimonial">
+          <!-- <img src="assets/images/design-files/hero1.png" alt="Ruth" /> -->
+          <div class="name"><b>Mita Radhakrishnan</b></div>
+          <div class="institution">Auroville Language Laboratory</div>
+          <p class="testimonial-text">
+            "Its evident how thoughtfully FeedbackSense addresses our
+            needs, even aspects we had not considered. A game-changer
+            for our day-to-day work."
+          </p>
+        </div>
+        <div class="testimonial">
+          <div class="name"><b>Sophia Martin</b></div>
+          <div class="institution">Boutique Owner</div>
+          <p class="testimonial-text">
+            "Chic Boutique's client base grew with FeedbackSense's
+            user-friendly survey tool. It's been a breeze to tailor our
+            stock to what our customers really want."
+          </p>
+        </div>
+        <div class="testimonial">
+          <div class="name"><b>Ankit Singh</b></div>
+          <div class="institution">Freelance Web Designer</div>
+          <p class="testimonial-text">
+            "FeedbackSense's affordable surveys were a game-changer for
+            my design bids, landing me three major clients"
+          </p>
+        </div>
+        <div class="testimonial">
+          <div class="name"><b>Jordan Lee</b></div>
+          <div class="institution">CEO</div>
+          <p class="testimonial-text">
+            "We saw a huge lift in course completions, thanks to
+            FeedbackSense's AI. It's smart, seamless, and absolutely
+            essential."
+          </p>
+        </div>
+      </div>
+    </testimonial>
+    <!-- testimonial end -->
 
-              <div class="col-lg-3 col-6">
-                <div class="stats-item text-center w-100 h-100">
-                  <span
-                    data-purecounter-start="0"
-                    data-purecounter-end="10000"
-                    data-purecounter-duration="1"
-                    class="purecounter"
-                  ></span>
-                  <p>Surveys Collected</p>
-                </div>
-              </div>
-              <!-- End Stats Item -->
+    <div class="separator"></div>
 
-              <div class="col-lg-3 col-6">
-                <div class="stats-item text-center w-100 h-100">
-                  <span
-                    data-purecounter-start="0"
-                    data-purecounter-end="50000"
-                    data-purecounter-duration="1"
-                    class="purecounter"
-                  ></span>
-                  <p>Questions processed</p>
-                </div>
-              </div>
-              <!-- End Stats Item -->
+    <!-- strap -->
+    <div class="strap-container">
+      <h2>Turn Frustration into Opportunity</h2>
+    </div>
+    <!-- strap -->
+
+    <div class="separator"></div>
+
+    <!-- left feature container -->
+    <leftFeature>
+      <div class="dual-feature-container">
+        <div class="left">
+          <h1>Customizable Feedback Campaigns to Suit Every Need</h1>
+          <p>
+            Great customer experiences begin with empathy. Instantly build
+            customer feedback surveys in a no-code, no hassle way. Be it for
+            detailed insights into individual experiences or a quick snapshot of
+            overall sentiment -  it only takes a few minutes to customize your
+            customer feedback surveys.
+          </p>
+        </div>
+        <div class="right">
+          <img src="/assets/images/design-files/Widget.png" alt="Design2" />
+        </div>
+      </div>
+    </leftFeature>
+    <!-- left feature container -->
+
+    <div class="separator"></div>
+
+    <!-- left feature container -->
+    <leftFeature>
+      <div class="dual-feature-container">
+        <div class="right">
+          <img src="/assets/images/design-files/slide 2.png" alt="Design2" />
+        </div>
+        <div class="left">
+          <h1>Never Miss a Cue</h1>
+          <p>
+            Don't let your customers slip away silently. Every departure is an
+            opportunity for improvement. Set keywords to spot signals of
+            dissatisfaction and identify potential churn before it even crosses
+            their minds. Proactively take measures to restore satisfaction and
+            keep your customers connected.
+          </p>
+        </div>
+      </div>
+    </leftFeature>
+    <!-- left feature container -->
+
+    <div class="separator"></div>
+
+    <!-- left feature container -->
+    <leftFeature>
+      <div class="dual-feature-container">
+        <div class="left">
+          <h1>Mitigate Churn Risks before they even Happen</h1>
+          <p>
+            Efficient customer support is more than just a response. Turn
+            customer feedback into actionable tickets, ensuring your CS teams
+            collaborate seamlessly in one central hub. Say goodbye to delays and
+            hello to swift issue resolution. Plus, measure satisfaction with
+            end-to-end campaigns to track improvements before and after
+            resolution.
+          </p>
+        </div>
+        <div class="right">
+          <img src="/assets/images/design-files/slide 1.png" alt="Design2" />
+        </div>
+      </div>
+    </leftFeature>
+    <!-- left feature container -->
+
+    <div class="separator"></div>
+
+    <!-- single feature container -->
+    <feature>
+      <div class="single-feature-container">
+        <div class="separator"></div>
+        <div class="how-it-works-container">
+          <div class="working-block">
+            <div class="number">
+              <h1>01</h1>
+            </div>
+            <div style="position: relative; top: -80px">
+              <i style="font-size: 40px;color: #FD246E;" class="bi bi-three-dots"></i>
+              <p style="font-weight: 600">Choose your solution</p>
+              <p style="color: gray">
+                Select one of our affordable & flexible solutions that suits
+                your business.
+              </p>
             </div>
           </div>
-
-          <div class="col-lg-5 order-1 order-lg-2 hero-img" data-aos="zoom-out">
-            <!-- <img src="assets/img/hero-img.svg" class="img-fluid mb-3 mb-lg-0" alt=""> -->
-            <img
-              src="assets/img/latest/hero1.webp"
-              class="img-fluid mb-3 mb-lg-0"
-              alt=""
-            />
+          <div class="working-block">
+            <div class="number">
+              <h1>02</h1>
+            </div>
+            <div style="position: relative; top: -80px">
+              <i style="font-size: 40px;color: #FD246E;" class="bi bi-check2-all"></i>
+              <p style="font-weight: 600">Get ready for big results</p>
+              <p style="color: gray">
+                Let our product deliver you a pathway to higher retention.
+              </p>
+            </div>
+          </div>
+          <div class="working-block">
+            <div class="number">
+              <h1>03</h1>
+            </div>
+            <div style="position: relative; top: -80px">
+              <i style="font-size: 40px;color: #FD246E;" class="bi bi-bar-chart-fill"></i>
+              <p style="font-weight: 600">Watch your revenue grow</p>
+              <p style="color: gray">Sit back & relax as you make more money</p>
+            </div>
           </div>
         </div>
       </div>
-    </section>
-    <!-- End Hero Section -->
+    </feature>
+    <!-- single feature container -->
 
-    <main id="main">
-      <!-- ======= Featured Services Section ======= -->
-      <section id="featured-services" class="featured-services">
-        <div class="container">
-          <div class="row gy-4">
-            <div
-              class="col-lg-4 col-md-6 service-item d-flex"
-              data-aos="fade-up"
-            >
-              <div class="icon flex-shrink-0">
-                <i class="bi bi-body-text"></i>
-              </div>
-              <div>
-                <h4 class="title">Intuitive Survey Building</h4>
-                <p class="description">
-                  Effortlessly create complex surveys with our drag & drop
-                  tree-based visual workflow, designed for ease and flexibility.
-                </p>
-                <a href="drdSurvey.html" class="readmore stretched-link"
-                  ><span>Learn More</span><i class="bi bi-arrow-right"></i
-                ></a>
-              </div>
-            </div>
-            <!-- End Service Item -->
+    <div class="separator"></div>
 
-            <div
-              class="col-lg-4 col-md-6 service-item d-flex"
-              data-aos="fade-up"
-              data-aos-delay="100"
-            >
-              <div class="icon flex-shrink-0"><i class="bi bi-robot"></i></div>
-              <div>
-                <h4 class="title">Advanced AI Analysis</h4>
-                <p class="description">
-                  Harness the power of AI to uncover rich insights from survey
-                  responses, elevating your data interpretation.
-                </p>
-                <a href="AiAnalysisDetail.html" class="readmore stretched-link"
-                  ><span>Learn More</span><i class="bi bi-arrow-right"></i
-                ></a>
-              </div>
-            </div>
-            <!-- End Service Item -->
-
-            <div
-              class="col-lg-4 col-md-6 service-item d-flex"
-              data-aos="fade-up"
-              data-aos-delay="200"
-            >
-              <div class="icon flex-shrink-0">
-                <i class="bi bi-currency-dollar"></i>
-              </div>
-              <div>
-                <h4 class="title">Budget-Friendly</h4>
-                <p class="description">
-                  Tailored for the price-conscious audience, offering premium
-                  features at a more affordable rate than competitors.
-                </p>
-                <a href="budget-friendly.html" class="readmore stretched-link"
-                  ><span>Learn More</span><i class="bi bi-arrow-right"></i
-                ></a>
-              </div>
-            </div>
-            <!-- End Service Item -->
+    <!-- brands -->
+    <brand>
+      <div class="brands-container">
+        <h1>Brands that love us</h1>
+        <div class="brand-container-icons">
+          <div class="single-brand-container" >
+            <img style="background-color: #92400D;padding: 5px;" src="/assets/images/brands/auroville.png" alt="Auroville"/>
+          </div>
+          <div class="single-brand-container" >
+            <img src="/assets/images/brands/guideflow.svg" alt="Guide Flow"/>
+          </div>
+          <div class="single-brand-container" >
+            <img style="background-color: #02041b;padding: 10px;" src="/assets/images/brands/qase.svg" alt="Om Sweets"/>
+          </div>
+          <div class="single-brand-container" >
+            <img src="/assets/images/brands/nityalogo.png" alt="Nitya Foundation"/>
+          </div>
+          <div class="single-brand-container" >
+            <img src="assets/images/brands/pageduty.png" alt="Page Duty"/>
           </div>
         </div>
-      </section>
-      <!-- End Featured Services Section -->
+      </div>
+    </brand>
+    <!-- brands -->
 
-      <!-- ======= About Us Section ======= -->
-      <section id="about" class="about pt-0">
-        <div class="container" data-aos="fade-up">
-          <div class="row gy-4">
-            <div
-              class="col-lg-6 position-relative align-self-start order-lg-last order-first"
-            >
-              <div style="position: relative; padding-bottom: 62.5%; height: 0">
-                <iframe
-                  src="https://www.loom.com/embed/a196b465a6294736925148a3c317fce6?sid=dae30450-7e5b-4f1b-aa57-78c4b99e7002"
-                  frameborder="0"
-                  webkitallowfullscreen
-                  mozallowfullscreen
-                  allowfullscreen
-                  style="
-                    position: absolute;
-                    top: 0;
-                    left: 0;
-                    width: 100%;
-                    height: 100%;
-                  "
-                ></iframe>
-              </div>
-              <!-- <a
-                href="https://www.loom.com/share/a196b465a6294736925148a3c317fce6?sid=286d233b-ad4e-415a-8c27-e4c8919a9241"
-                class="glightbox play-btn"
-              ></a> -->
-            </div>
-            <div class="col-lg-6 content order-last order-lg-first">
-              <h3>Real Success Stories with FeedbackSense</h3>
-              <ul>
-                <li data-aos="fade-up" data-aos-delay="100">
-                  <i class="bi bi-magnet"></i>
-                  <div>
-                    <h5>Customer Retention</h5>
-                    <p>
-                      A local boutique increased their repeat customers by 30%
-                      after using FeedbackSense's drag & drop survey builder to
-                      quickly gather and implement client fashion preferences.
-                    </p>
-                  </div>
-                </li>
-                <li data-aos="fade-up" data-aos-delay="200">
-                  <i class="bi bi-lightbulb"></i>
-                  <div>
-                    <h5>Educational Insight</h5>
-                    <p>
-                      An educational tech startup boosted course completion
-                      rates by 25% by analyzing student feedback through
-                      FeedbackSense's AI Analysis, tailoring their curriculum to
-                      learning patterns.
-                    </p>
-                  </div>
-                </li>
-                <li data-aos="fade-up" data-aos-delay="300">
-                  <i class="bi bi-cash"></i>
-                  <div>
-                    <h5>Affordable Outreach</h5>
-                    <p>
-                      A freelance web designer offered competitive pricing and
-                      won over three major contracts by showcasing detailed
-                      project proposals using FeedbackSense's cost-effective
-                      survey tools for market research.
-                    </p>
-                  </div>
-                </li>
-              </ul>
-            </div>
-          </div>
+    <div class="separator"></div>
+
+    <!-- cta -->
+    <cta>
+      <div class="main-cta-container">
+        <div class="cta-sub-container">
+          <h1>Want to reduce churn and improve retention?</h1>
+          <p>Book a demo today & see Feedbacksense in action</p>
         </div>
-      </section>
-      <!-- End About Us Section -->
-
-      <!-- ======= Call To Action Section ======= -->
-      <section id="call-to-action" class="call-to-action">
-        <div class="container" data-aos="zoom-out">
-          <div class="row justify-content-center">
-            <div class="col-lg-8 text-center">
-              <h3>Harness the Voice of Your Customers.</h3>
-              <p>
-                Empower your business with actionable insights from customer
-                feedback.
-              </p>
-              <a
-                class="cta-btn"
-                href="https://app.feedbacksense.io/"
-                target="_blank"
-                >Get Started</a
-              >
-            </div>
+        <div class="cta-sub-container-2">
+          <div class="input-group mb-3">
+            <input
+              type="text"
+              class="form-control"
+              placeholder="Work email"
+              aria-label="Recipient's username"
+              aria-describedby="button-addon2"
+            />
           </div>
+          <p style="text-align: start">
+            I agree to the privacy policy including to FeedbackSense using my
+            contact details to contact me for marketing purposes.
+          </p>
+          <a href="https://calendly.com/feedbacksense/demo" ><button class="button-contained">Book a Demo</button></a>
         </div>
-      </section>
-      <!-- End Call To Action Section -->
+      </div>
+    </cta>
+    <!-- cta -->
 
-      <!-- ======= Features Section ======= -->
-      <section id="features" class="features">
-        <div class="container">
-          <div
-            class="row gy-4 align-items-center features-item"
-            data-aos="fade-up"
-          >
-            <div class="col-md-5 order-1 order-md-2">
-              <div class="image-back">
-                <img
-                  src="assets/img/latest/hero5.webp"
-                  class="img-fluid"
-                  alt=""
-                />
-              </div>
-            </div>
-            <div class="col-md-7 order-2 order-md-1">
-              <h3>Craft Surveys with Precision & Ease</h3>
-              <p>
-                Enhance your insights and grow with FeedbackSense, your go-to
-                Online Form Builder. Our intuitive interface makes it easy to
-                create and customize surveys in just a few clicks. Engage and
-                deepen your understanding of your audience with every question
-                you craft using our powerful and user-friendly tools
-              </p>
-            </div>
-          </div>
-          <!-- Features Item -->
-
-          <div
-            class="row gy-4 align-items-center features-item"
-            data-aos="fade-up"
-          >
-            <div class="col-md-5">
-              <div class="image-back">
-                <img
-                  src="assets/img/latest/hero2.webp"
-                  class="img-fluid"
-                  alt=""
-                />
-              </div>
-            </div>
-            <div class="col-md-7">
-              <h3>Unlock Insights, Drive Excellence</h3>
-              <p>
-                Delve into customer sentiment with precision. FeedbackSense
-                gives you the tools to not just collect responses but to analyze
-                them for actionable insights, propelling your service to new
-                heights.
-              </p>
-              <ul>
-                <li><i class="bi bi-check"></i>Data-Driven Strategy</li>
-                <li><i class="bi bi-check"></i>Real-Time Feedback</li>
-                <li><i class="bi bi-check"></i>Comprehensive Overview</li>
-              </ul>
-            </div>
-          </div>
-          <!-- Features Item -->
-
-          <div
-            class="row gy-4 align-items-center features-item"
-            data-aos="fade-up"
-          >
-            <div class="col-md-5 order-1 order-md-2">
-              <img
-                src="assets/img/latest/dragdropwithflow.webp"
-                class="img-fluid"
-                alt=""
-              />
-            </div>
-            <div class="col-md-7 order-2 order-md-1">
-              <h3>Seamless Survey Logic in a Snap</h3>
-              <p>
-                Effortlessly design dynamic surveys with FeedbackSense, a
-                leading Survey Builder, featuring visual skip logic. Customize
-                the survey experience for each respondent to gather precise and
-                valuable insights efficiently.
-              </p>
-              <ul>
-                <li><i class="bi bi-check"></i>Simplified Logic Creation</li>
-                <li>
-                  <i class="bi bi-check"></i>Enhanced Respondent Experience
-                </li>
-                <li><i class="bi bi-check"></i>Efficient Data Collection</li>
-              </ul>
-            </div>
-          </div>
-          <!-- Features Item -->
-
-          <div
-            class="row gy-4 align-items-center features-item"
-            data-aos="fade-up"
-          >
-            <div class="col-md-5">
-              <div class="image-back">
-                <img
-                  src="assets/img/latest/hero3.webp"
-                  class="img-fluid"
-                  alt=""
-                />
-              </div>
-            </div>
-            <div class="col-md-7">
-              <h3>Instant Feedback, Anywhere, Anytime</h3>
-              <p>
-                Stay connected with your audience using FeedbackSense, a Free
-                Survey Tool offering real-time notifications. Gain insights on
-                the move and respond swiftly to your customers' needs, ensuring
-                you're always in the loop.
-              </p>
-              <ul>
-                <li><i class="bi bi-check"></i>On-the-Go Insights</li>
-                <li><i class="bi bi-check"></i>Customer Service Excellence</li>
-                <li><i class="bi bi-check"></i>Real-Time Data Analysis</li>
-              </ul>
-            </div>
-          </div>
-          <!-- Features Item -->
-
-          <div
-            class="row gy-4 align-items-center features-item"
-            data-aos="fade-up"
-          >
-            <div class="col-md-5 order-1 order-md-2">
-              <div class="image-back">
-                <img
-                  src="assets/img/latest/hero4.webp"
-                  class="img-fluid"
-                  alt=""
-                />
-              </div>
-            </div>
-            <div class="col-md-7 order-2 order-md-1">
-              <h3>Seamless Integration, Smarter Engagement</h3>
-              <p>
-                Connect your survey results directly to your CRM with
-                FeedbackSense's powerful integrations. Effortlessly sync
-                respondent data to Salesforce, HubSpot, and more.
-              </p>
-              <ul>
-                <li><i class="bi bi-check"></i>Sales Prospecting</li>
-                <li><i class="bi bi-check"></i>Marketing Automation</li>
-                <li><i class="bi bi-check"></i>Workflow Efficiency</li>
-              </ul>
-            </div>
-          </div>
-          <!-- Features Item -->
-        </div>
-      </section>
-      <!-- End Features Section -->
-
-      <!-- ======= Testimonials Section ======= -->
-      <section id="testimonials" class="testimonials">
-        <div class="container">
-          <div style="display: flex;padding: 0px 50px;justify-content: center;" >
-            <div style="width: 60%;" >
-              <h3>
-                "Its evident how thoughtfully FeedbackSense addresses our needs,
-                even aspects we had not considered. A game-changer for our
-                day-to-day work."
-              </h3>
-              <p>
-                <b>Mita Radhakrishnan</b> <br />
-                Auroville Language Laboratory
-              </p>
-              <p></p>
-            </div>
-            <div style="width: 120px;height: 120px;background-color: #9b543e;border-radius: 50%;" >
-              <img style="width: 120px;margin-top: 30px;" src="/assets/img/latest/av_logo_text.png" alt="Auroville Logo" >
-            </div>
-          </div>
-        </div>
-      </section>
-      <!-- End Testimonials Section -->
-
-      <section id="faq" class="faq"></section>
-    </main>
-    <!-- End #main -->
+    <div class="separator"></div>
 
     <!-- ======= Footer ======= -->
     <footer id="footer" class="footer">
       <div class="container">
         <div class="row gy-4">
           <div class="col-lg-5 col-md-12 footer-info">
-            <a href="index.html" class="logo d-flex align-items-center">
+            <a
+              style="text-decoration: none"
+              href="index.html"
+              class="logo d-flex align-items-center"
+            >
               <span>FeedbackSense</span>
             </a>
             <p>
@@ -672,11 +499,10 @@
           <div class="col-lg-2 col-6 footer-links">
             <h4>Products</h4>
             <ul>
-              <li><a href="drdSurvey.html">Survey Builder</a></li>
-              <li><a href="AiAnalysisDetail.html">AI Analysis</a></li>
-              <li><a href="skipLogicDetail.html">Skip Logic</a></li>
-              <li><a href="templateDetail.html">Pre-built Templates</a></li>
-              <!-- <li><a href="folderDetail.html">Folders</a></li> -->
+              <li><a href="#">Survey Builder</a></li>
+              <li><a href="#">AI Analysis</a></li>
+              <li><a href="#">Skip Logic</a></li>
+              <li><a href="#">Pre-built Templates</a></li>
             </ul>
           </div>
 
@@ -687,7 +513,6 @@
             <p>
               <strong>Address:</strong> 756, 80 Feet Road, SBI Colony<br />
               Bangalore, India<br />
-              <strong>Phone:</strong> +91 7007475550<br />
               <strong>Email:</strong> support@feedbacksense.io<br />
             </p>
           </div>
@@ -702,22 +527,9 @@
       </div>
     </footer>
     <!-- End Footer -->
-    <!-- End Footer -->
 
-    <a
-      href="#"
-      class="scroll-top d-flex align-items-center justify-content-center"
-      ><i class="bi bi-arrow-up-short"></i
-    ></a>
     <div id="preloader"></div>
 
-    <!-- Vendor JS Files -->
-    <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-    <script src="assets/vendor/purecounter/purecounter_vanilla.js"></script>
-    <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
-    <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
-    <script src="assets/vendor/aos/aos.js"></script>
-    <script src="assets/vendor/php-email-form/validate.js"></script>
     <!-- Google tag (gtag.js) -->
     <script
       async
