@@ -629,6 +629,7 @@
 .pricing-table-container {
   margin: 20px;
   padding: 20px;
+  overflow-x: scroll;
 }
 
 .pricing-table-container thead tr th {
@@ -796,6 +797,12 @@
   color: var(--color-back);
 }
 
+@media only screen and (max-width: 900px) {
+  .zf-templateWidth{
+    width: 90%;
+  }
+}
+
 /* contact us */
 
 
@@ -814,3 +821,11 @@
   margin-bottom: 10px;
 }
 /* guide flow */
+
+@media only screen and (max-width: 900px) {
+
+  .guide-flow-container{
+    padding: 10px 5px;
+  }
+
+}
