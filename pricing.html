@@ -72,7 +72,13 @@
       })(window);
     </script>
     <!-- End of feedbacksense code -->
-    <script async data-id="4287224381" id="chatling-embed-script" type="text/javascript" src="https://chatling.ai/js/embed.js"></script>
+    <script
+      async
+      data-id="4287224381"
+      id="chatling-embed-script"
+      type="text/javascript"
+      src="https://chatling.ai/js/embed.js"
+    ></script>
   </head>
 
   <body>
@@ -159,7 +165,7 @@
               <button id="login-button" class="button-outlined mobile-button">
                 Login
               </button>
-              <a href="/book-a-demo.html" >
+              <a href="/book-a-demo.html">
                 <button id="demo-button" class="button-contained mobile-button">
                   Book a demo
                 </button>
@@ -176,12 +182,36 @@
       <div class="early-bird-chip">Earlybird Offer</div>
       <h2>Simple no-trick pricing</h2>
       <h6>Start for 100% Free. No Credit Card Required.</h6>
-      <a href="https://app.feedbacksense.io" ><button class="button-contained">Get started</button></a>
+      <a href="https://app.feedbacksense.io"
+        ><button class="button-contained">Get started</button></a
+      >
     </div>
     <!-- pricing hero -->
 
+    <!-- pricing switch -->
+    <div style="margin: auto; width: fit-content">
+      <div class="switch-wrapper">
+        <input id="monthly" type="radio" name="switch" />
+        <input id="yearly" type="radio" name="switch" checked />
+        <label for="monthly"
+          ><span style="margin-left: 25px">Monthly</span></label
+        >
+        <label for="yearly"
+          ><span style="margin-left: 25px">Yearly</span></label
+        >
+        <span class="highlighter"></span>
+      </div>
+      <div style="width: fit-content; margin: auto">
+        <span style="font-size: 12px; color: green">
+          (save 10%) or start with our 
+          <a href="https://app.feedbacksense.io" style="color : green;" >free plan</a>
+        </span>
+      </div>
+    </div>
+    <!-- pricing switch -->
+
     <!-- pricing table -->
-    <div class="pricing-table-container">
+    <div class="table-wrapper pricing-table-container">
       <table class="table">
         <thead>
           <tr>
@@ -190,16 +220,19 @@
               <p>Price</p>
             </th>
             <th scope="col">
-              Free
-              <p>$0</p>
+              Basic
+              <p class="price monthly hide">$26</p>
+              <p class="price yearly">$20</p>
             </th>
             <th scope="col">
-              Lite
-              <p>$49</p>
+              Plus
+              <p class="price monthly hide">$51</p>
+              <p class="price yearly">$45</p>
             </th>
             <th scope="col">
               Pro
-              <p>$100</p>
+              <p class="price monthly hide">$81</p>
+              <p class="price yearly">$75</p>
             </th>
           </tr>
         </thead>
@@ -279,8 +312,8 @@
           <tr>
             <th scope="row">Collected responses monthly</th>
             <td>100</td>
-            <td>500</td>
-            <td>2000</td>
+            <td>1000</td>
+            <td>10000</td>
           </tr>
           <tr>
             <th scope="row">Active surveys</th>
@@ -337,26 +370,29 @@
       <div class="single-faq-container">
         <div class="add-clickable"><i class="bi bi-plus"></i></div>
         <div>
-          <p>
-            Can I change or cancel my subscription at any time?
+          <p>Can I change or cancel my subscription at any time?</p>
+          <p style="display: none; color: gray">
+            Yes, you can modify or cancel your subscription anytime.
           </p>
-          <p style="display: none;color : gray" >Yes, you can modify or cancel your subscription anytime.</p>
         </div>
       </div>
       <div class="single-faq-container">
         <div class="add-clickable"><i class="bi bi-plus"></i></div>
         <div>
           <p>Is there a trial period for FeedbackSense?</p>
-          <p style="display: none;;color : gray" >Yes, we offer a 14-day free trial for all new users.</p>
+          <p style="display: none; color: gray">
+            Yes, we offer a 14-day free trial for all new users.
+          </p>
         </div>
       </div>
       <div class="single-faq-container">
         <div class="add-clickable"><i class="bi bi-plus"></i></div>
         <div>
-          <p>
-            How do I get started with FeedbackSense?
+          <p>How do I get started with FeedbackSense?</p>
+          <p style="display: none; color: gray">
+            It's simple! Just click on the login button on top right and follow
+            the steps
           </p>
-          <p style="display: none;;color : gray" >It's simple! Just click on the login button on top right and follow the steps</p>
         </div>
       </div>
     </div>
@@ -448,21 +484,47 @@
     <div id="preloader"></div>
 
     <script>
-      const clickableItems = document.querySelectorAll('.add-clickable');
-      clickableItems.forEach(item => {
-        item.addEventListener('click', () => {
-              const parentDiv = item.parentElement;
-              const answer = parentDiv.querySelector('p:last-of-type');
+      const tableWrapper = document.querySelector(".table-wrapper");
+      const switchInputs = document.querySelectorAll(".switch-wrapper input");
+      const prices = tableWrapper.querySelectorAll(".price");
 
-              // Hide all other answers
-              const allAnswers = document.querySelectorAll('.single-faq-container p:last-of-type');
-              allAnswers.forEach(ans => ans.style.display = 'none');
+      const toggleClass = "hide";
 
-              // Toggle display of clicked answer
-              answer.style.display = (answer.style.display === 'none') ? 'block' : 'none';
-          });
+      for (const switchInput of switchInputs) {
+        switchInput.addEventListener("input", function () {
+          for (const price of prices) {
+            price.classList.add(toggleClass);
+          }
+          const activePrices = tableWrapper.querySelectorAll(
+            `.price.${switchInput.id}`
+          );
+
+          for (const activePrice of activePrices) {
+            activePrice.classList.remove(toggleClass);
+          }
+        });
+      }
+    </script>
+
+    <script>
+      const clickableItems = document.querySelectorAll(".add-clickable");
+      clickableItems.forEach((item) => {
+        item.addEventListener("click", () => {
+          const parentDiv = item.parentElement;
+          const answer = parentDiv.querySelector("p:last-of-type");
+
+          // Hide all other answers
+          const allAnswers = document.querySelectorAll(
+            ".single-faq-container p:last-of-type"
+          );
+          allAnswers.forEach((ans) => (ans.style.display = "none"));
+
+          // Toggle display of clicked answer
+          answer.style.display =
+            answer.style.display === "none" ? "block" : "none";
+        });
       });
-  </script>
+    </script>
 
     <!-- Google tag (gtag.js) -->
     <script
